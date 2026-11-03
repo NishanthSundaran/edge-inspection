@@ -1,0 +1,32 @@
+{
+ "category": "cable",
+ "n_test": 150,
+ "n_defect": 92,
+ "n_calib": 22,
+ "image_auroc": 0.9874437781109445,
+ "pixel_auroc": 0.9848054348058564,
+ "aupro": 0.9299667102427654,
+ "calibrated": {
+  "threshold": 44.42300796508789,
+  "false_alarm_rate": 0.034482758620689655,
+  "miss_rate": 0.07608695652173914
+ },
+ "oracle_f1": {
+  "threshold": 43.4346809387207,
+  "false_alarm_rate": 0.05172413793103448,
+  "miss_rate": 0.021739130434782608
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore",
+ "fit_s": 101.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 27.136338991113007,
+  "p95_ms": 30.49521725042723
+ },
+ "params": 24862528,
+ "buffers_mb": 127.2,
+ "ckpt_mb": 226.8
+}

@@ -1,0 +1,9 @@
+[project]
+name = "edge-inspection"
+version = "0.1.0"
+description = "Industrial visual inspection on MVTec AD, from anomaly model to an edge service"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

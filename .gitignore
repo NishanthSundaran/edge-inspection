@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+logs/
+deploy/
+pre_trained/
+results/*/*.npz
+.pytest_cache/

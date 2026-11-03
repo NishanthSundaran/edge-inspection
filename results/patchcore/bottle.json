@@ -1,0 +1,32 @@
+{
+ "category": "bottle",
+ "n_test": 83,
+ "n_defect": 63,
+ "n_calib": 21,
+ "image_auroc": 1.0,
+ "pixel_auroc": 0.9854411407966077,
+ "aupro": 0.9438601549652997,
+ "calibrated": {
+  "threshold": 27.832176208496094,
+  "false_alarm_rate": 0.1,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 38.06740188598633,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.0
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore",
+ "fit_s": 84.2,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 24.973819497972727,
+  "p95_ms": 28.437775396741923
+ },
+ "params": 24862528,
+ "buffers_mb": 118.4,
+ "ckpt_mb": 218.0
+}

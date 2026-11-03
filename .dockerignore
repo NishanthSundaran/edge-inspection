@@ -1,0 +1,6 @@
+*
+!requirements-serve.txt
+!edgeinspect/__init__.py
+!edgeinspect/serving.py
+!serve/
+!deploy/

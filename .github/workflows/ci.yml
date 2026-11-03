@@ -1,0 +1,29 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.10"}
+      - run: pip install -r requirements-serve.txt scipy==1.15.3 scikit-learn==1.7.2 httpx pytest
+      - run: python -m pytest -q
+  container:
+    runs-on: ubuntu-22.04
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.10"}
+      - run: pip install numpy==2.2.6 openvino==2026.4.1 && python -m tests.tiny_model deploy/tiny
+      - run: docker build -t edge-inspection .
+      - name: smoke test the running container
+        run: |
+          docker run -d -p 8000:8000 --name svc edge-inspection
+          for i in $(seq 30); do curl -sf localhost:8000/health && break; sleep 1; done
+          python -c "from PIL import Image; Image.new('RGB',(64,64),(240,240,240)).save('bright.png')"
+          curl -sf -F file=@bright.png localhost:8000/inspect/tiny | tee out.json
+          grep -q '"defect":true' out.json
+          curl -sf localhost:8000/metrics | grep 'inspect_parts_total{category="tiny"} 1'
+          docker logs svc

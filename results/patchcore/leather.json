@@ -1,0 +1,32 @@
+{
+ "category": "leather",
+ "n_test": 124,
+ "n_defect": 92,
+ "n_calib": 24,
+ "image_auroc": 1.0,
+ "pixel_auroc": 0.9922737243174581,
+ "aupro": 0.9750916577710197,
+ "calibrated": {
+  "threshold": 27.022085189819336,
+  "false_alarm_rate": 0.46875,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 39.104618072509766,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.0
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore",
+ "fit_s": 123.9,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 29.38598500622902,
+  "p95_ms": 33.310500053630676
+ },
+ "params": 24862528,
+ "buffers_mb": 139.2,
+ "ckpt_mb": 238.8
+}

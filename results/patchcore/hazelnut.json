@@ -1,0 +1,32 @@
+{
+ "category": "hazelnut",
+ "n_test": 110,
+ "n_defect": 70,
+ "n_calib": 39,
+ "image_auroc": 1.0,
+ "pixel_auroc": 0.9881461786454939,
+ "aupro": 0.9472159589920452,
+ "calibrated": {
+  "threshold": 45.28632736206055,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 48.81937789916992,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.0
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore",
+ "fit_s": 324.0,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 42.70043199358042,
+  "p95_ms": 45.908777200384066
+ },
+ "params": 24862528,
+ "buffers_mb": 221.6,
+ "ckpt_mb": 321.2
+}

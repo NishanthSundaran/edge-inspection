@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Line inspection</title>
+<style>
+  :root { --bg: #f6f6f3; --panel: #ffffff; --ink: #1c1d1f; --muted: #6a6d72; --rule: #e3e3de;
+          --ok: #2f7d4f; --warn: #b26a00; --bad: #b3261e; --font: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141518; --panel: #1d1f23; --ink: #e8e8e6; --muted: #9a9ca1; --rule: #2e3036;
+            --ok: #5fbf85; --warn: #e0a030; --bad: #ef6b62; }
+  }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); overflow-x: clip; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
+  p.sub { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: right; padding: 10px 12px; border-bottom: 1px solid var(--rule); font-size: 14px; font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; }
+  th { color: var(--muted); font-weight: 500; font-size: 13px; }
+  .ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); }
+  .wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Line inspection</h1>
+  <p class="sub">Rolling window per category, refreshed every 2 s. Drift is the window's median score against
+    known-good calibration parts, in standard deviations; above 3 means the line has changed.</p>
+  <div class="wrap">
+  <table>
+    <thead><tr><th>category</th><th>inspected</th><th>flagged</th><th>flag rate (window)</th><th>drift</th>
+      <th>p50 ms</th><th>p95 ms</th><th>runtime</th></tr></thead>
+    <tbody id="rows"><tr><td colspan="8">loading</td></tr></tbody>
+  </table>
+  </div>
+</main>
+<script>
+const fmt = (v, d = 1) => v === null || v === undefined ? "n/a" : Number(v).toFixed(d);
+async function tick() {
+  try {
+    const s = await (await fetch("stats")).json();
+    const rows = Object.entries(s).map(([c, r]) => {
+      const dz = r.drift_z, cls = dz === null ? "" : Math.abs(dz) > 3 ? "bad" : Math.abs(dz) > 1.5 ? "warn" : "ok";
+      return `<tr><td>${c}</td><td>${r.inspected}</td><td>${r.flagged}</td>
+        <td>${r.window_flag_rate === null ? "n/a" : (100 * r.window_flag_rate).toFixed(1) + "%"}</td>
+        <td class="${cls}">${fmt(dz, 2)}</td><td>${fmt(r.latency_ms_p50)}</td><td>${fmt(r.latency_ms_p95)}</td>
+        <td>${r.runtime}</td></tr>`;
+    });
+    document.getElementById("rows").innerHTML = rows.join("") || '<tr><td colspan="8">no models loaded</td></tr>';
+  } catch (e) { /* service restarting; keep the last table */ }
+}
+tick(); setInterval(tick, 2000);
+</script>
+</body>
+</html>

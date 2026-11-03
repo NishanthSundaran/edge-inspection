@@ -1,0 +1,78 @@
+{
+ "ort-cpu-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854395530520648,
+  "aupro": 0.9447175673550706,
+  "calibrated": {
+   "threshold": 21.02019691467285,
+   "false_alarm_rate": 1.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.27079772949219,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 333.6274225002853,
+   "p95_ms": 340.4836068410077
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854395535460909,
+  "aupro": 0.9447175750731948,
+  "calibrated": {
+   "threshold": 21.02045440673828,
+   "false_alarm_rate": 1.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.27065658569336,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 217.44923098594882,
+   "p95_ms": 233.3504373513278
+  }
+ },
+ "openvino-cpu-int8": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 0.973015873015873,
+  "pixel_auroc": 0.858384390585819,
+  "aupro": 0.5206259770801327,
+  "calibrated": {
+   "threshold": 50.309234619140625,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.2698412698412698
+  },
+  "oracle_f1": {
+   "threshold": 34.708770751953125,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 77.9017324821325,
+   "p95_ms": 78.52788585005328
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 362.4,
+  "ov_fp32.bin": 230.9,
+  "ov_fp32.xml": 0.2,
+  "ov_int8.bin": 90.9,
+  "ov_int8.xml": 0.4
+ }
+}

@@ -1,0 +1,7 @@
+# The service image: CPU only, no torch.
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+numpy==2.2.6
+pillow==12.3.0
+openvino==2026.4.1
