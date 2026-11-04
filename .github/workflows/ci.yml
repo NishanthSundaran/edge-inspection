@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.10"}
-      - run: pip install numpy==2.2.6 openvino==2026.4.1 && python -m tests.tiny_model deploy/tiny
+      - run: pip install numpy==2.2.6 openvino==2026.4.1 pillow==12.3.0 && python -m tests.tiny_model deploy/tiny
       - run: docker build -t edge-inspection .
       - name: smoke test the running container
         run: |
