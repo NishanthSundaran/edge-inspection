@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
 logs/
-deploy/
+deploy
 pre_trained/
 .pytest_cache/

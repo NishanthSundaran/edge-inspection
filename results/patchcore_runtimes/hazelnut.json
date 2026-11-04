@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881461786454939,
+  "aupro": 0.9472159589920452,
+  "calibrated": {
+   "threshold": 45.28632736206055,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.81937789916992,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 39.90025899838656,
+   "p95_ms": 40.42342560424004
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881183742366462,
+  "aupro": 0.9471476554342899,
+  "calibrated": {
+   "threshold": 45.34375,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.781246185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 15.676530500059016,
+   "p95_ms": 15.986919302667957
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881451715660866,
+  "aupro": 0.9472015976673147,
+  "calibrated": {
+   "threshold": 45.27933120727539,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.8137321472168,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 32.70220149715897,
+   "p95_ms": 33.61014213733142
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881652153242877,
+  "aupro": 0.9474307478152827,
+  "calibrated": {
+   "threshold": 45.25,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.937496185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 6.922669505001977,
+   "p95_ms": 6.992949049163144
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881458043964663,
+  "aupro": 0.9472016794380835,
+  "calibrated": {
+   "threshold": 45.281593322753906,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.79771041870117,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 416.48328299925197,
+   "p95_ms": 428.6641912171035
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881458015043477,
+  "aupro": 0.9472016853738607,
+  "calibrated": {
+   "threshold": 45.281593322753906,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.79767608642578,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 287.54643150023185,
+   "p95_ms": 302.22348844545195
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881458060264271,
+  "aupro": 0.947201778104243,
+  "calibrated": {
+   "threshold": 45.2816047668457,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.797706604003906,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 264.92765700095333,
+   "p95_ms": 290.5701577896252
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9892427992741876,
+  "aupro": 0.9388540310205912,
+  "calibrated": {
+   "threshold": 45.42567443847656,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 45.653934478759766,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 116.55019350291695,
+   "p95_ms": 127.27753309882245
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9879692492499921,
+  "aupro": 0.946828089492635,
+  "calibrated": {
+   "threshold": 45.7813835144043,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.7828369140625,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 263.21355599793606,
+   "p95_ms": 275.8253420048277
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881983157757407,
+  "aupro": 0.9460736989227557,
+  "calibrated": {
+   "threshold": 45.665401458740234,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 48.77181625366211,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 118.17875350243412,
+   "p95_ms": 122.05295913445298
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 542.3,
+  "model_rebank_head-fp32.onnx": 542.3,
+  "ov_fp32.bin": 321.0,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 302.1,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 302.1,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 136.0,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 80.6,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881562854283775,
+  "aupro": 0.9466943643633868,
+  "calibrated": {
+   "threshold": 45.57737350463867,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 47.976318359375,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 97.87368097750004,
+   "p95_ms": 102.96928094903706
+  },
+  "bank": [
+   36044,
+   1536
+  ]
+ },
+ "service": {
+  "category": "hazelnut",
+  "n_test": 110,
+  "n_defect": 70,
+  "n_calib": 39,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9881509801547127,
+  "aupro": 0.9469674208038203,
+  "calibrated": {
+   "threshold": 43.870601654052734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 47.296512603759766,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 125.31348297488876,
+   "p95_ms": 130.70979340263875
+  }
+ }
+}

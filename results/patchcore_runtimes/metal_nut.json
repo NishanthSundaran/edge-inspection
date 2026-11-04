@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.998533724340176,
+  "pixel_auroc": 0.9864875105876706,
+  "aupro": 0.9399720964469856,
+  "calibrated": {
+   "threshold": 37.36976623535156,
+   "false_alarm_rate": 0.2727272727272727,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.45534133911133,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 24.313652000273578,
+   "p95_ms": 24.967686604941264
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.998533724340176,
+  "pixel_auroc": 0.9864771854680168,
+  "aupro": 0.9400819956989132,
+  "calibrated": {
+   "threshold": 37.3125,
+   "false_alarm_rate": 0.2727272727272727,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.374996185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 11.555475008208305,
+   "p95_ms": 12.56806511519244
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.998533724340176,
+  "pixel_auroc": 0.9864976050756296,
+  "aupro": 0.9399475278859526,
+  "calibrated": {
+   "threshold": 37.362937927246094,
+   "false_alarm_rate": 0.2727272727272727,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.41933059692383,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 21.205302007729188,
+   "p95_ms": 22.03505645156838
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.9987781036168133,
+  "pixel_auroc": 0.9867019843221518,
+  "aupro": 0.9401332653375213,
+  "calibrated": {
+   "threshold": 37.53125,
+   "false_alarm_rate": 0.22727272727272727,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.343746185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 5.233106479863636,
+   "p95_ms": 5.326031953154597
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.998533724340176,
+  "pixel_auroc": 0.9864899860883305,
+  "aupro": 0.9399978119555146,
+  "calibrated": {
+   "threshold": 37.35585021972656,
+   "false_alarm_rate": 0.2727272727272727,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.4227409362793,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 244.87507101730444,
+   "p95_ms": 250.43549054680625
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.998533724340176,
+  "pixel_auroc": 0.986489981220411,
+  "aupro": 0.9399977875245493,
+  "calibrated": {
+   "threshold": 37.35588836669922,
+   "false_alarm_rate": 0.2727272727272727,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.42273712158203,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 180.54039850539993,
+   "p95_ms": 182.9042999073863
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.998533724340176,
+  "pixel_auroc": 0.986489996441244,
+  "aupro": 0.9399978056170274,
+  "calibrated": {
+   "threshold": 37.355995178222656,
+   "false_alarm_rate": 0.2727272727272727,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.422706604003906,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 162.10731548198964,
+   "p95_ms": 183.66359799983908
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.9975562072336266,
+  "pixel_auroc": 0.9819162640576761,
+  "aupro": 0.9183377641432116,
+  "calibrated": {
+   "threshold": 38.29304885864258,
+   "false_alarm_rate": 0.22727272727272727,
+   "miss_rate": 0.010752688172043012
+  },
+  "oracle_f1": {
+   "threshold": 40.926395416259766,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 73.0368045042269,
+   "p95_ms": 76.56050730147399
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.9980449657869013,
+  "pixel_auroc": 0.9863370506810138,
+  "aupro": 0.9385577104412609,
+  "calibrated": {
+   "threshold": 37.81178665161133,
+   "false_alarm_rate": 0.18181818181818182,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.25181198120117,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 160.4107985040173,
+   "p95_ms": 184.89669640694046
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.9975562072336266,
+  "pixel_auroc": 0.9856884523472175,
+  "aupro": 0.9353354984991749,
+  "calibrated": {
+   "threshold": 38.36875534057617,
+   "false_alarm_rate": 0.22727272727272727,
+   "miss_rate": 0.010752688172043012
+  },
+  "oracle_f1": {
+   "threshold": 40.85866928100586,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 74.85547500255052,
+   "p95_ms": 78.11238084977958
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 348.6,
+  "model_rebank_head-fp32.onnx": 348.6,
+  "ov_fp32.bin": 224.0,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 180.9,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 180.9,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 87.4,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 56.2,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.9960899315738025,
+  "pixel_auroc": 0.985900595115466,
+  "aupro": 0.9375895126446279,
+  "calibrated": {
+   "threshold": 38.48027420043945,
+   "false_alarm_rate": 0.045454545454545456,
+   "miss_rate": 0.010752688172043012
+  },
+  "oracle_f1": {
+   "threshold": 40.223690032958984,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 63.940825493773445,
+   "p95_ms": 74.65937830857001
+  },
+  "bank": [
+   20275,
+   1536
+  ]
+ },
+ "service": {
+  "category": "metal_nut",
+  "n_test": 115,
+  "n_defect": 93,
+  "n_calib": 22,
+  "image_auroc": 0.9946236559139785,
+  "pixel_auroc": 0.9859029995682962,
+  "aupro": 0.9375841123520653,
+  "calibrated": {
+   "threshold": 38.756160736083984,
+   "false_alarm_rate": 0.045454545454545456,
+   "miss_rate": 0.010752688172043012
+  },
+  "oracle_f1": {
+   "threshold": 40.287086486816406,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.010752688172043012
+  },
+  "latency": {
+   "median_ms": 76.48886099923402,
+   "p95_ms": 80.95414155104663
+  }
+ }
+}

@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922737243174581,
+  "aupro": 0.9750916577710197,
+  "calibrated": {
+   "threshold": 27.022085189819336,
+   "false_alarm_rate": 0.46875,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 39.104618072509766,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 26.91652400244493,
+   "p95_ms": 28.385250146675386
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922806671858371,
+  "aupro": 0.9751340737420394,
+  "calibrated": {
+   "threshold": 27.03125,
+   "false_alarm_rate": 0.46875,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 39.124996185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 11.516159007442184,
+   "p95_ms": 12.401123900781386
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922802719833129,
+  "aupro": 0.9751013107641586,
+  "calibrated": {
+   "threshold": 27.036510467529297,
+   "false_alarm_rate": 0.46875,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 39.10062026977539,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 22.796162505983375,
+   "p95_ms": 23.13275305350544
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922954149802979,
+  "aupro": 0.975006029017551,
+  "calibrated": {
+   "threshold": 26.671875,
+   "false_alarm_rate": 0.59375,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.937496185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 5.124379997141659,
+   "p95_ms": 5.165810354810674
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922746312071347,
+  "aupro": 0.9750894198367215,
+  "calibrated": {
+   "threshold": 27.006488800048828,
+   "false_alarm_rate": 0.46875,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 39.10941696166992,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 265.6899175053695,
+   "p95_ms": 275.3693656894029
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922746317148261,
+  "aupro": 0.9750894196130152,
+  "calibrated": {
+   "threshold": 27.006507873535156,
+   "false_alarm_rate": 0.46875,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 39.109474182128906,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 195.60931849991903,
+   "p95_ms": 198.2492852548603
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922746324857651,
+  "aupro": 0.9750894146950956,
+  "calibrated": {
+   "threshold": 27.006397247314453,
+   "false_alarm_rate": 0.46875,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 39.109474182128906,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 175.3030739928363,
+   "p95_ms": 182.61864059459185
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9678241418067186,
+  "aupro": 0.8924669053839894,
+  "calibrated": {
+   "threshold": 28.59679412841797,
+   "false_alarm_rate": 0.09375,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 33.13287353515625,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 78.17630801582709,
+   "p95_ms": 82.93191310804104
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9922608012224173,
+  "aupro": 0.9753615677405844,
+  "calibrated": {
+   "threshold": 26.805227279663086,
+   "false_alarm_rate": 0.5625,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 40.00592041015625,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 174.6422109863488,
+   "p95_ms": 190.65786720602773
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9924131706564605,
+  "aupro": 0.9728143510741404,
+  "calibrated": {
+   "threshold": 28.900781631469727,
+   "false_alarm_rate": 0.0625,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 37.265872955322266,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 80.84638050058857,
+   "p95_ms": 84.82466963760089
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 377.5,
+  "model_rebank_head-fp32.onnx": 377.5,
+  "ov_fp32.bin": 238.5,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 199.0,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 199.0,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 94.7,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 59.9,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9923974237769689,
+  "aupro": 0.9718395990561135,
+  "calibrated": {
+   "threshold": 27.003244400024414,
+   "false_alarm_rate": 0.34375,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 35.695655822753906,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 68.56514399987645,
+   "p95_ms": 69.44180569407763
+  },
+  "bank": [
+   22630,
+   1536
+  ]
+ },
+ "service": {
+  "category": "leather",
+  "n_test": 124,
+  "n_defect": 92,
+  "n_calib": 24,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9924527865358506,
+  "aupro": 0.9718032919722516,
+  "calibrated": {
+   "threshold": 26.81730842590332,
+   "false_alarm_rate": 0.40625,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 35.501834869384766,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 84.43498301494401,
+   "p95_ms": 90.76483024400659
+  }
+ }
+}

@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9899749373433584,
+  "pixel_auroc": 0.9806292745482413,
+  "aupro": 0.9128762309946137,
+  "calibrated": {
+   "threshold": 32.58326721191406,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 31.148141860961914,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 28.134864507592283,
+   "p95_ms": 29.62112229579361
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9899749373433584,
+  "pixel_auroc": 0.9806516899756108,
+  "aupro": 0.9132042018870833,
+  "calibrated": {
+   "threshold": 32.625,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 31.234373092651367,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 12.884661497082561,
+   "p95_ms": 13.061149908753578
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9899749373433584,
+  "pixel_auroc": 0.9806307221505464,
+  "aupro": 0.9128893576774516,
+  "calibrated": {
+   "threshold": 32.58839416503906,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 31.171308517456055,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 24.188011506339535,
+   "p95_ms": 24.81186433287803
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9908103592314119,
+  "pixel_auroc": 0.9810349739656077,
+  "aupro": 0.9118212029628883,
+  "calibrated": {
+   "threshold": 33.6875,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 32.124996185302734,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 5.946022502030246,
+   "p95_ms": 5.971971031976864
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9899749373433584,
+  "pixel_auroc": 0.9806445974261103,
+  "aupro": 0.9129500149385363,
+  "calibrated": {
+   "threshold": 32.573890686035156,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 31.153234481811523,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 282.2758209949825,
+   "p95_ms": 288.8454204585287
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9899749373433584,
+  "pixel_auroc": 0.9806446243412249,
+  "aupro": 0.9129501322619623,
+  "calibrated": {
+   "threshold": 32.5739631652832,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 31.153276443481445,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 210.79815400298685,
+   "p95_ms": 221.2753549858462
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9899749373433584,
+  "pixel_auroc": 0.9806445304017042,
+  "aupro": 0.9129500001345988,
+  "calibrated": {
+   "threshold": 32.57377243041992,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 31.15331268310547,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 187.00137500127312,
+   "p95_ms": 191.0795102987322
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9741019214703426,
+  "pixel_auroc": 0.976992444371125,
+  "aupro": 0.8985875778198185,
+  "calibrated": {
+   "threshold": 35.562660217285156,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.2807017543859649
+  },
+  "oracle_f1": {
+   "threshold": 31.688085556030273,
+   "false_alarm_rate": 0.14285714285714285,
+   "miss_rate": 0.03508771929824561
+  },
+  "latency": {
+   "median_ms": 81.66599151445553,
+   "p95_ms": 87.12090784683824
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9891395154553049,
+  "pixel_auroc": 0.9810754463387285,
+  "aupro": 0.9136312949826627,
+  "calibrated": {
+   "threshold": 32.67170715332031,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 31.270347595214844,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 186.1296705028508,
+   "p95_ms": 188.9239938609535
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9883040935672514,
+  "pixel_auroc": 0.982178735895399,
+  "aupro": 0.9169375129824189,
+  "calibrated": {
+   "threshold": 35.397308349609375,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.07017543859649122
+  },
+  "oracle_f1": {
+   "threshold": 33.012943267822266,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 87.26221350661945,
+   "p95_ms": 96.79305039171594
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 398.9,
+  "model_rebank_head-fp32.onnx": 398.9,
+  "ov_fp32.bin": 249.2,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 212.4,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 212.4,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 100.0,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 62.6,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.987468671679198,
+  "pixel_auroc": 0.9812542476902935,
+  "aupro": 0.9123309279504832,
+  "calibrated": {
+   "threshold": 32.90495681762695,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 32.24423599243164,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 73.03745551325846,
+   "p95_ms": 83.05514975072582
+  },
+  "bank": [
+   24371,
+   1536
+  ]
+ },
+ "service": {
+  "category": "grid",
+  "n_test": 78,
+  "n_defect": 57,
+  "n_calib": 26,
+  "image_auroc": 0.9874686716791979,
+  "pixel_auroc": 0.981172750455364,
+  "aupro": 0.9127564983643504,
+  "calibrated": {
+   "threshold": 33.05707931518555,
+   "false_alarm_rate": 0.047619047619047616,
+   "miss_rate": 0.05263157894736842
+  },
+  "oracle_f1": {
+   "threshold": 32.062904357910156,
+   "false_alarm_rate": 0.09523809523809523,
+   "miss_rate": 0.017543859649122806
+  },
+  "latency": {
+   "median_ms": 88.30939349718392,
+   "p95_ms": 91.53085910220398
+  }
+ }
+}

@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9916666666666666,
+  "pixel_auroc": 0.9728648760810938,
+  "aupro": 0.9451843566427737,
+  "calibrated": {
+   "threshold": 39.04383087158203,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 37.89978790283203,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 24.269446497783065,
+   "p95_ms": 24.768196389777586
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9920833333333334,
+  "pixel_auroc": 0.9729341977366149,
+  "aupro": 0.9452886966202222,
+  "calibrated": {
+   "threshold": 39.0,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 37.937496185302734,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 10.659557505277917,
+   "p95_ms": 10.87052496150136
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9916666666666666,
+  "pixel_auroc": 0.9728949891723749,
+  "aupro": 0.9452106058280931,
+  "calibrated": {
+   "threshold": 39.05733871459961,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 37.89472198486328,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 20.376320491777733,
+   "p95_ms": 21.35354717465816
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9910416666666667,
+  "pixel_auroc": 0.9732481274785809,
+  "aupro": 0.9457808949074245,
+  "calibrated": {
+   "threshold": 38.875,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.075
+  },
+  "oracle_f1": {
+   "threshold": 38.624996185302734,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.05
+  },
+  "latency": {
+   "median_ms": 4.758037990541197,
+   "p95_ms": 4.815855395281687
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9916666666666666,
+  "pixel_auroc": 0.972889439026957,
+  "aupro": 0.9452010119111419,
+  "calibrated": {
+   "threshold": 39.04366683959961,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 37.89778518676758,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 243.5949224891374,
+   "p95_ms": 255.96497816877672
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9916666666666666,
+  "pixel_auroc": 0.9728894429894918,
+  "aupro": 0.9452010188524481,
+  "calibrated": {
+   "threshold": 39.04369354248047,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 37.897727966308594,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 175.11891000322066,
+   "p95_ms": 177.05090946838027
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9916666666666666,
+  "pixel_auroc": 0.9728894129941847,
+  "aupro": 0.9452009315822973,
+  "calibrated": {
+   "threshold": 39.04374313354492,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 37.89776611328125,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 156.05191599752288,
+   "p95_ms": 159.27433479810134
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.96875,
+  "pixel_auroc": 0.9650038167071574,
+  "aupro": 0.9314495307935693,
+  "calibrated": {
+   "threshold": 39.352027893066406,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.1
+  },
+  "oracle_f1": {
+   "threshold": 38.65115737915039,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.05
+  },
+  "latency": {
+   "median_ms": 71.43418300256599,
+   "p95_ms": 75.23423223901773
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.99,
+  "pixel_auroc": 0.9713584256669738,
+  "aupro": 0.9424992195772938,
+  "calibrated": {
+   "threshold": 39.16594696044922,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.075
+  },
+  "oracle_f1": {
+   "threshold": 38.36851119995117,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 155.61996048199944,
+   "p95_ms": 158.87959499232238
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9933333333333333,
+  "pixel_auroc": 0.963976390225977,
+  "aupro": 0.9332832979571484,
+  "calibrated": {
+   "threshold": 39.30980682373047,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 38.669437408447266,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.025
+  },
+  "latency": {
+   "median_ms": 73.78538500051945,
+   "p95_ms": 77.25981694820803
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 341.0,
+  "model_rebank_head-fp32.onnx": 341.0,
+  "ov_fp32.bin": 220.2,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 176.1,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 176.1,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 85.5,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 55.3,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.9924999999999999,
+  "pixel_auroc": 0.9729557687018052,
+  "aupro": 0.9458059607148314,
+  "calibrated": {
+   "threshold": 38.03079605102539,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.075
+  },
+  "oracle_f1": {
+   "threshold": 41.77376174926758,
+   "false_alarm_rate": 0.016666666666666666,
+   "miss_rate": 0.075
+  },
+  "latency": {
+   "median_ms": 62.33223050367087,
+   "p95_ms": 64.9029746549786
+  },
+  "bank": [
+   19660,
+   1536
+  ]
+ },
+ "service": {
+  "category": "transistor",
+  "n_test": 100,
+  "n_defect": 40,
+  "n_calib": 21,
+  "image_auroc": 0.995,
+  "pixel_auroc": 0.9732275850394183,
+  "aupro": 0.9455994773949039,
+  "calibrated": {
+   "threshold": 37.93010330200195,
+   "false_alarm_rate": 0.03333333333333333,
+   "miss_rate": 0.075
+  },
+  "oracle_f1": {
+   "threshold": 37.04291915893555,
+   "false_alarm_rate": 0.06666666666666667,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 75.03256500058342,
+   "p95_ms": 79.91889599070419
+  }
+ }
+}

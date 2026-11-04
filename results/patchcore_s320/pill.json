@@ -1,0 +1,32 @@
+{
+ "category": "pill",
+ "n_test": 167,
+ "n_defect": 141,
+ "n_calib": 27,
+ "image_auroc": 0.9503546099290779,
+ "pixel_auroc": 0.9800118349304058,
+ "aupro": 0.9592317203055761,
+ "calibrated": {
+  "threshold": 40.323524475097656,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.24113475177304963
+ },
+ "oracle_f1": {
+  "threshold": 36.444583892822266,
+  "false_alarm_rate": 0.11538461538461539,
+  "miss_rate": 0.07092198581560284
+ },
+ "model": "patchcore",
+ "size": 320,
+ "bicubic": false,
+ "tag": "patchcore_s320",
+ "fit_s": 374.1,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 68.07264349481557,
+  "p95_ms": 70.70630865491694
+ },
+ "params": 24862528,
+ "buffers_mb": 236.1,
+ "ckpt_mb": 335.6
+}

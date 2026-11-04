@@ -1,0 +1,32 @@
+{
+ "category": "screw",
+ "n_test": 160,
+ "n_defect": 119,
+ "n_calib": 32,
+ "image_auroc": 0.9635171141627383,
+ "pixel_auroc": 0.9927451710319569,
+ "aupro": 0.9633174202925958,
+ "calibrated": {
+  "threshold": 41.074562072753906,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.5378151260504201
+ },
+ "oracle_f1": {
+  "threshold": 32.940120697021484,
+  "false_alarm_rate": 0.17073170731707318,
+  "miss_rate": 0.025210084033613446
+ },
+ "model": "patchcore",
+ "size": 320,
+ "bicubic": false,
+ "tag": "patchcore_s320",
+ "fit_s": 528.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 82.08253199700266,
+  "p95_ms": 85.07659780007089
+ },
+ "params": 24862528,
+ "buffers_mb": 283.3,
+ "ckpt_mb": 382.8
+}

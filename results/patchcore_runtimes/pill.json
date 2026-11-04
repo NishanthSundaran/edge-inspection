@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9465357337697763,
+  "pixel_auroc": 0.980514678525414,
+  "aupro": 0.9479726575261516,
+  "calibrated": {
+   "threshold": 37.733402252197266,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.2553191489361702
+  },
+  "oracle_f1": {
+   "threshold": 33.860836029052734,
+   "false_alarm_rate": 0.23076923076923078,
+   "miss_rate": 0.04964539007092199
+  },
+  "latency": {
+   "median_ms": 28.894953517010435,
+   "p95_ms": 30.871355246927124
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9470812875068194,
+  "pixel_auroc": 0.9807028167970984,
+  "aupro": 0.9481463267454734,
+  "calibrated": {
+   "threshold": 37.75,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.24822695035460993
+  },
+  "oracle_f1": {
+   "threshold": 33.874996185302734,
+   "false_alarm_rate": 0.23076923076923078,
+   "miss_rate": 0.04964539007092199
+  },
+  "latency": {
+   "median_ms": 12.15515099465847,
+   "p95_ms": 12.952258586301468
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9465357337697763,
+  "pixel_auroc": 0.9804539141700479,
+  "aupro": 0.947938453608321,
+  "calibrated": {
+   "threshold": 37.698707580566406,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.2553191489361702
+  },
+  "oracle_f1": {
+   "threshold": 33.83041000366211,
+   "false_alarm_rate": 0.23076923076923078,
+   "miss_rate": 0.04964539007092199
+  },
+  "latency": {
+   "median_ms": 24.338303002878092,
+   "p95_ms": 24.737700806872454
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9457174031642116,
+  "pixel_auroc": 0.980391469878892,
+  "aupro": 0.9480090824830455,
+  "calibrated": {
+   "threshold": 37.09375,
+   "false_alarm_rate": 0.07692307692307693,
+   "miss_rate": 0.2198581560283688
+  },
+  "oracle_f1": {
+   "threshold": 33.624996185302734,
+   "false_alarm_rate": 0.2692307692307692,
+   "miss_rate": 0.04964539007092199
+  },
+  "latency": {
+   "median_ms": 4.94735999382101,
+   "p95_ms": 5.010355814010836
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9470812875068194,
+  "pixel_auroc": 0.9804588500563994,
+  "aupro": 0.9479360669367197,
+  "calibrated": {
+   "threshold": 37.70444107055664,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.2553191489361702
+  },
+  "oracle_f1": {
+   "threshold": 33.851158142089844,
+   "false_alarm_rate": 0.23076923076923078,
+   "miss_rate": 0.04964539007092199
+  },
+  "latency": {
+   "median_ms": 295.72590498719364,
+   "p95_ms": 311.3696826971136
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9470812875068194,
+  "pixel_auroc": 0.9804588501000182,
+  "aupro": 0.9479360895308947,
+  "calibrated": {
+   "threshold": 37.704402923583984,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.2553191489361702
+  },
+  "oracle_f1": {
+   "threshold": 33.851173400878906,
+   "false_alarm_rate": 0.23076923076923078,
+   "miss_rate": 0.04964539007092199
+  },
+  "latency": {
+   "median_ms": 211.62851150438655,
+   "p95_ms": 227.58075873716734
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9470812875068194,
+  "pixel_auroc": 0.9804588826972436,
+  "aupro": 0.947936232985442,
+  "calibrated": {
+   "threshold": 37.704402923583984,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.2553191489361702
+  },
+  "oracle_f1": {
+   "threshold": 33.85111999511719,
+   "false_alarm_rate": 0.23076923076923078,
+   "miss_rate": 0.04964539007092199
+  },
+  "latency": {
+   "median_ms": 187.09113700606395,
+   "p95_ms": 197.24089724186342
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9094380796508457,
+  "pixel_auroc": 0.9452477003663098,
+  "aupro": 0.8631243809029667,
+  "calibrated": {
+   "threshold": 38.9511833190918,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.3262411347517731
+  },
+  "oracle_f1": {
+   "threshold": 37.19003677368164,
+   "false_alarm_rate": 0.19230769230769232,
+   "miss_rate": 0.09929078014184398
+  },
+  "latency": {
+   "median_ms": 85.50942300644238,
+   "p95_ms": 91.20605964708375
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9451718494271686,
+  "pixel_auroc": 0.9774706108391095,
+  "aupro": 0.9448292463009511,
+  "calibrated": {
+   "threshold": 37.9938850402832,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.23404255319148937
+  },
+  "oracle_f1": {
+   "threshold": 33.92377471923828,
+   "false_alarm_rate": 0.15384615384615385,
+   "miss_rate": 0.05673758865248227
+  },
+  "latency": {
+   "median_ms": 188.59592048102058,
+   "p95_ms": 199.89266939664958
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9388979814511729,
+  "pixel_auroc": 0.9542618867714775,
+  "aupro": 0.8994118293438773,
+  "calibrated": {
+   "threshold": 39.036888122558594,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.1347517730496454
+  },
+  "oracle_f1": {
+   "threshold": 37.72807693481445,
+   "false_alarm_rate": 0.15384615384615385,
+   "miss_rate": 0.07092198581560284
+  },
+  "latency": {
+   "median_ms": 90.03749501425773,
+   "p95_ms": 94.03692055348074
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 401.4,
+  "model_rebank_head-fp32.onnx": 401.4,
+  "ov_fp32.bin": 250.5,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 213.9,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 213.9,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 100.7,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 62.9,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9388979814511729,
+  "pixel_auroc": 0.9787633320570956,
+  "aupro": 0.9434735214148937,
+  "calibrated": {
+   "threshold": 38.046634674072266,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.23404255319148937
+  },
+  "oracle_f1": {
+   "threshold": 35.48508834838867,
+   "false_alarm_rate": 0.11538461538461539,
+   "miss_rate": 0.07092198581560284
+  },
+  "latency": {
+   "median_ms": 72.32853399182204,
+   "p95_ms": 76.57433729618788
+  },
+  "bank": [
+   24576,
+   1536
+  ]
+ },
+ "service": {
+  "category": "pill",
+  "n_test": 167,
+  "n_defect": 141,
+  "n_calib": 27,
+  "image_auroc": 0.9405346426623022,
+  "pixel_auroc": 0.9807112275733537,
+  "aupro": 0.9480596933957174,
+  "calibrated": {
+   "threshold": 36.471534729003906,
+   "false_alarm_rate": 0.038461538461538464,
+   "miss_rate": 0.24113475177304963
+  },
+  "oracle_f1": {
+   "threshold": 33.03897476196289,
+   "false_alarm_rate": 0.3076923076923077,
+   "miss_rate": 0.05673758865248227
+  },
+  "latency": {
+   "median_ms": 93.2643830019515,
+   "p95_ms": 97.5373814086197
+  }
+ }
+}

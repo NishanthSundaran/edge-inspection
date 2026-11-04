@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9868421052631579,
+  "pixel_auroc": 0.9299329304038059,
+  "aupro": 0.8822727696378763,
+  "calibrated": {
+   "threshold": 43.3449821472168,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 39.18680191040039,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 27.215971000259742,
+   "p95_ms": 29.784435394685712
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9868421052631579,
+  "pixel_auroc": 0.9298345077052431,
+  "aupro": 0.882181030810463,
+  "calibrated": {
+   "threshold": 43.40625,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 39.249996185302734,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 11.471436489955522,
+   "p95_ms": 11.612046498339623
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9868421052631579,
+  "pixel_auroc": 0.9298643054745573,
+  "aupro": 0.8821971016342456,
+  "calibrated": {
+   "threshold": 43.36265182495117,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 39.192047119140625,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 22.48964351019822,
+   "p95_ms": 22.66155789984623
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9868421052631579,
+  "pixel_auroc": 0.9303347240821862,
+  "aupro": 0.8825274847765615,
+  "calibrated": {
+   "threshold": 43.625,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 39.343746185302734,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 5.078034999314696,
+   "p95_ms": 5.139680314459838
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9868421052631579,
+  "pixel_auroc": 0.9298987579778627,
+  "aupro": 0.8822542018687787,
+  "calibrated": {
+   "threshold": 43.35971450805664,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 39.19151306152344,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 270.41329150961246,
+   "p95_ms": 275.81739879387897
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9868421052631579,
+  "pixel_auroc": 0.9298987651853129,
+  "aupro": 0.8822542129631883,
+  "calibrated": {
+   "threshold": 43.35974884033203,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 39.1915397644043,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 197.15975649887696,
+   "p95_ms": 201.38869335642084
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9868421052631579,
+  "pixel_auroc": 0.9298987260958952,
+  "aupro": 0.8822541768829356,
+  "calibrated": {
+   "threshold": 43.35976028442383,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 39.19154357910156,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 175.7381460047327,
+   "p95_ms": 195.89865323068807
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9587719298245614,
+  "pixel_auroc": 0.9103006040279841,
+  "aupro": 0.790986954245405,
+  "calibrated": {
+   "threshold": 38.7609748840332,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.05
+  },
+  "oracle_f1": {
+   "threshold": 41.651031494140625,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "latency": {
+   "median_ms": 78.70890101185068,
+   "p95_ms": 82.53909576014848
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9859649122807017,
+  "pixel_auroc": 0.9290510114081867,
+  "aupro": 0.8811510519640086,
+  "calibrated": {
+   "threshold": 43.881614685058594,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 38.998592376708984,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 175.00736449437682,
+   "p95_ms": 181.3138724610326
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9859649122807017,
+  "pixel_auroc": 0.9314129822444757,
+  "aupro": 0.879701766036418,
+  "calibrated": {
+   "threshold": 43.8570556640625,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.08333333333333333
+  },
+  "oracle_f1": {
+   "threshold": 38.98823547363281,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.016666666666666666
+  },
+  "latency": {
+   "median_ms": 83.35102250566706,
+   "p95_ms": 86.57596913253656
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 378.8,
+  "model_rebank_head-fp32.onnx": 378.8,
+  "ov_fp32.bin": 239.1,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 199.7,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 199.7,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 95.0,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 60.0,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9842105263157894,
+  "pixel_auroc": 0.9309881723193656,
+  "aupro": 0.8781822832471761,
+  "calibrated": {
+   "threshold": 43.490238189697266,
+   "false_alarm_rate": 0.05263157894736842,
+   "miss_rate": 0.08333333333333333
+  },
+  "oracle_f1": {
+   "threshold": 41.090877532958984,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.03333333333333333
+  },
+  "latency": {
+   "median_ms": 69.34666699089576,
+   "p95_ms": 71.29496325796936
+  },
+  "bank": [
+   22732,
+   1536
+  ]
+ },
+ "service": {
+  "category": "wood",
+  "n_test": 79,
+  "n_defect": 60,
+  "n_calib": 25,
+  "image_auroc": 0.9815789473684211,
+  "pixel_auroc": 0.9310243675307168,
+  "aupro": 0.8770737974165668,
+  "calibrated": {
+   "threshold": 43.518375396728516,
+   "false_alarm_rate": 0.10526315789473684,
+   "miss_rate": 0.08333333333333333
+  },
+  "oracle_f1": {
+   "threshold": 40.7115478515625,
+   "false_alarm_rate": 0.15789473684210525,
+   "miss_rate": 0.03333333333333333
+  },
+  "latency": {
+   "median_ms": 82.7578930038726,
+   "p95_ms": 86.47959950612858
+  }
+ }
+}

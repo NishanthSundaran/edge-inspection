@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9792542016806722,
+  "pixel_auroc": 0.9811117922641043,
+  "aupro": 0.9319105059344235,
+  "calibrated": {
+   "threshold": 25.737550735473633,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.520092010498047,
+   "false_alarm_rate": 0.09375,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 26.18155800155364,
+   "p95_ms": 27.057081257225946
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9800420168067228,
+  "pixel_auroc": 0.9811140133865738,
+  "aupro": 0.9319353761304391,
+  "calibrated": {
+   "threshold": 25.6875,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.546873092651367,
+   "false_alarm_rate": 0.0625,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 11.799955507740378,
+   "p95_ms": 12.230997538426891
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9792542016806722,
+  "pixel_auroc": 0.9811123347611924,
+  "aupro": 0.9319041385208214,
+  "calibrated": {
+   "threshold": 25.78835105895996,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.49864387512207,
+   "false_alarm_rate": 0.09375,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 22.502835490740836,
+   "p95_ms": 23.14119690272491
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9792542016806722,
+  "pixel_auroc": 0.9807611162603068,
+  "aupro": 0.9307178913874539,
+  "calibrated": {
+   "threshold": 25.890625,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 30.484373092651367,
+   "false_alarm_rate": 0.0625,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 5.576392999500968,
+   "p95_ms": 5.668183806119487
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9795168067226891,
+  "pixel_auroc": 0.9810973817932922,
+  "aupro": 0.9318757522438095,
+  "calibrated": {
+   "threshold": 25.707977294921875,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.508033752441406,
+   "false_alarm_rate": 0.09375,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 270.3946439869469,
+   "p95_ms": 278.5894830492907
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9795168067226891,
+  "pixel_auroc": 0.9810973923884228,
+  "aupro": 0.9318758152647513,
+  "calibrated": {
+   "threshold": 25.70786476135254,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.5079345703125,
+   "false_alarm_rate": 0.09375,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 192.75637650571298,
+   "p95_ms": 195.30800079955952
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9795168067226891,
+  "pixel_auroc": 0.9810973959749824,
+  "aupro": 0.9318758359685166,
+  "calibrated": {
+   "threshold": 25.708053588867188,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.507980346679688,
+   "false_alarm_rate": 0.09375,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 171.15023449878208,
+   "p95_ms": 178.49375759396935
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.8839285714285714,
+  "pixel_auroc": 0.9032846644156467,
+  "aupro": 0.6821030255459634,
+  "calibrated": {
+   "threshold": 29.217199325561523,
+   "false_alarm_rate": 0.15625,
+   "miss_rate": 0.11764705882352941
+  },
+  "oracle_f1": {
+   "threshold": 28.531536102294922,
+   "false_alarm_rate": 0.15625,
+   "miss_rate": 0.09243697478991597
+  },
+  "latency": {
+   "median_ms": 77.40743350586854,
+   "p95_ms": 82.78785180300474
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9787289915966386,
+  "pixel_auroc": 0.9803611962562073,
+  "aupro": 0.929828206137214,
+  "calibrated": {
+   "threshold": 26.00651741027832,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 30.86737060546875,
+   "false_alarm_rate": 0.0625,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 171.35500999575015,
+   "p95_ms": 175.37743985594716
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9771533613445378,
+  "pixel_auroc": 0.9776921847043903,
+  "aupro": 0.9253621915619358,
+  "calibrated": {
+   "threshold": 29.026838302612305,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 32.014320373535156,
+   "false_alarm_rate": 0.09375,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 81.67261999915354,
+   "p95_ms": 84.96792440419085
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 371.2,
+  "model_rebank_head-fp32.onnx": 371.2,
+  "ov_fp32.bin": 235.4,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 195.0,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 195.0,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 93.1,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 59.1,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9795168067226891,
+  "pixel_auroc": 0.9818435531785985,
+  "aupro": 0.9335782926918039,
+  "calibrated": {
+   "threshold": 26.42389678955078,
+   "false_alarm_rate": 0.21875,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.353073120117188,
+   "false_alarm_rate": 0.0625,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 69.1730199905578,
+   "p95_ms": 78.26642840518615
+  },
+  "bank": [
+   22118,
+   1536
+  ]
+ },
+ "service": {
+  "category": "zipper",
+  "n_test": 151,
+  "n_defect": 119,
+  "n_calib": 24,
+  "image_auroc": 0.9800420168067228,
+  "pixel_auroc": 0.9817861626082856,
+  "aupro": 0.9339830485917948,
+  "calibrated": {
+   "threshold": 26.214073181152344,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.008403361344537815
+  },
+  "oracle_f1": {
+   "threshold": 29.233165740966797,
+   "false_alarm_rate": 0.0625,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 85.13160851725843,
+   "p95_ms": 89.86262789112516
+  }
+ }
+}

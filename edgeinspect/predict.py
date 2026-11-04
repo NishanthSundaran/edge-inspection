@@ -8,6 +8,8 @@ Resizing happens on the host with `resize`, identically for every runtime.
 
 from __future__ import annotations
 
+import copy
+
 import pathlib
 import time
 
@@ -63,10 +65,10 @@ class TorchPredictor:
     name = "pytorch"
 
     def __init__(self, core: Core, device: str = "cuda", half: bool = False):
-        self.core = core.eval().to(device)
         self.device, self.half = device, half
-        if half:
-            self.core.half()
+        if half:  # a copy: .half() is in place and the caller's model is reused for the next runtime
+            core = copy.deepcopy(core).half()
+        self.core = core.eval().to(device)
 
     @torch.inference_mode()
     def __call__(self, x: np.ndarray):
@@ -91,20 +93,48 @@ def export_onnx(core: Core, path: pathlib.Path, size: int, opset: int = 17) -> p
     return path
 
 
+def _load_gpu_libs() -> None:
+    """ONNX Runtime's CUDA and TensorRT providers dlopen libcublasLt/cudnn/libnvinfer by soname and, when
+    they are missing, silently fall back to the CPU. Load the copies that ship as pip wheels (torch's
+    nvidia-* packages, tensorrt-cu12-libs) so the GPU providers really run."""
+    import ctypes
+    import importlib.util
+    import onnxruntime as ort
+    ort.preload_dlls()
+    spec = importlib.util.find_spec("tensorrt_libs")
+    if spec and spec.submodule_search_locations:
+        d = pathlib.Path(list(spec.submodule_search_locations)[0])
+        for lib in ("libnvinfer.so.10", "libnvinfer_plugin.so.10", "libnvonnxparser.so.10"):
+            if (d / lib).exists():
+                ctypes.CDLL(str(d / lib), mode=ctypes.RTLD_GLOBAL)
+
+
 class OnnxPredictor:
-    def __init__(self, path: pathlib.Path, provider: str = "CPUExecutionProvider", threads: int | None = None):
+    def __init__(self, path: pathlib.Path, provider: str = "CPUExecutionProvider", threads: int | None = None,
+                 max_batch: int = 16):
         import onnxruntime as ort
+        if provider != "CPUExecutionProvider":
+            _load_gpu_libs()
         so = ort.SessionOptions()
         if threads:
             so.intra_op_num_threads = threads
         provs = [provider] if provider == "CPUExecutionProvider" else [provider, "CPUExecutionProvider"]
         if provider == "TensorrtExecutionProvider":
+            import onnx
+            dims = onnx.load(str(path), load_external_data=False).graph.input[0].type.tensor_type.shape.dim
+            hw = f"{dims[2].dim_value}x{dims[3].dim_value}"
             cache = path.parent / "trt_cache"
             provs = [("TensorrtExecutionProvider", {"trt_engine_cache_enable": True,
                                                     "trt_engine_cache_path": str(cache),
-                                                    "trt_fp16_enable": True}),
+                                                    "trt_fp16_enable": True,
+                                                    # one engine for every batch size 1..max_batch
+                                                    "trt_profile_min_shapes": f"image:1x3x{hw}",
+                                                    "trt_profile_opt_shapes": f"image:1x3x{hw}",
+                                                    "trt_profile_max_shapes": f"image:{max_batch}x3x{hw}"}),
                      "CUDAExecutionProvider", "CPUExecutionProvider"]
         self.sess = ort.InferenceSession(str(path), so, providers=provs)
+        if self.sess.get_providers()[0] != provider:  # a silent CPU fallback would be mislabelled
+            raise RuntimeError(f"{provider} unavailable, session runs on {self.sess.get_providers()}")
         self.name = f"onnxruntime-{provider.replace('ExecutionProvider', '').lower()}"
 
     def __call__(self, x: np.ndarray):

@@ -11,6 +11,7 @@ from .predict import resize
 
 def _run(pred, paths, size: int, bicubic: bool = False, batch: int = 16):
     scores, maps = [], []
+    batch = getattr(pred, "eval_batch", batch)  # CPU runtimes: the batch x 1024 x bank distance matrix lives in RAM
     for i in range(0, len(paths), batch):
         if getattr(pred, "takes_paths", False):  # the deployed path does its own (PIL) preprocessing
             s, m = pred.from_paths(paths[i:i + batch])
@@ -29,8 +30,8 @@ def _call_split(pred, x):
     batch x 1024 x bank), split the batch in half and retry. Results are per image, so they are unchanged."""
     try:
         return pred(x)
-    except torch.OutOfMemoryError:
-        if len(x) == 1:
+    except Exception as e:  # torch.OutOfMemoryError, or ONNX Runtime's "Failed to allocate memory"
+        if len(x) == 1 or not (isinstance(e, torch.OutOfMemoryError) or "allocate" in str(e)):
             raise
         torch.cuda.empty_cache()
         h = len(x) // 2

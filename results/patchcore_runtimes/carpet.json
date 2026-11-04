@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9863563402889245,
+  "pixel_auroc": 0.9907012112516937,
+  "aupro": 0.9487715856894804,
+  "calibrated": {
+   "threshold": 37.13919448852539,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.06741573033707865
+  },
+  "oracle_f1": {
+   "threshold": 33.205989837646484,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 29.30552850011736,
+   "p95_ms": 31.147602711280342
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9863563402889245,
+  "pixel_auroc": 0.9907083608278975,
+  "aupro": 0.9489882172056534,
+  "calibrated": {
+   "threshold": 37.0625,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.06741573033707865
+  },
+  "oracle_f1": {
+   "threshold": 33.249996185302734,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 12.463676495826803,
+   "p95_ms": 12.729329361172859
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9863563402889245,
+  "pixel_auroc": 0.9906928517863604,
+  "aupro": 0.948734581895299,
+  "calibrated": {
+   "threshold": 37.1150016784668,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.06741573033707865
+  },
+  "oracle_f1": {
+   "threshold": 33.167198181152344,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 24.66569750686176,
+   "p95_ms": 25.497408854425885
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9855537720706258,
+  "pixel_auroc": 0.9906693424572734,
+  "aupro": 0.9477747480377449,
+  "calibrated": {
+   "threshold": 37.125,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.07865168539325842
+  },
+  "oracle_f1": {
+   "threshold": 33.562496185302734,
+   "false_alarm_rate": 0.03571428571428571,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 5.498692495166324,
+   "p95_ms": 5.596491054166108
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9863563402889245,
+  "pixel_auroc": 0.9906940760337514,
+  "aupro": 0.9486969806368373,
+  "calibrated": {
+   "threshold": 37.106201171875,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.06741573033707865
+  },
+  "oracle_f1": {
+   "threshold": 33.15108871459961,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 309.6926955040544,
+   "p95_ms": 328.4004622895736
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9863563402889245,
+  "pixel_auroc": 0.9906940793680754,
+  "aupro": 0.9486970028747083,
+  "calibrated": {
+   "threshold": 37.10624694824219,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.06741573033707865
+  },
+  "oracle_f1": {
+   "threshold": 33.151004791259766,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 220.1112635084428,
+   "p95_ms": 223.01254063640954
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9863563402889245,
+  "pixel_auroc": 0.9906940738763425,
+  "aupro": 0.9486968825807535,
+  "calibrated": {
+   "threshold": 37.10618591308594,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.06741573033707865
+  },
+  "oracle_f1": {
+   "threshold": 33.151145935058594,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 196.28578000993002,
+   "p95_ms": 201.77316025219625
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9791332263242375,
+  "pixel_auroc": 0.9770552160798156,
+  "aupro": 0.9036566108617909,
+  "calibrated": {
+   "threshold": 32.56328582763672,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.033707865168539325
+  },
+  "oracle_f1": {
+   "threshold": 31.016603469848633,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 89.43797298707068,
+   "p95_ms": 99.81605669890995
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9859550561797753,
+  "pixel_auroc": 0.9907032246201364,
+  "aupro": 0.9463581496141359,
+  "calibrated": {
+   "threshold": 37.87554168701172,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.07865168539325842
+  },
+  "oracle_f1": {
+   "threshold": 32.65269470214844,
+   "false_alarm_rate": 0.07142857142857142,
+   "miss_rate": 0.02247191011235955
+  },
+  "latency": {
+   "median_ms": 196.0355615010485,
+   "p95_ms": 199.33875306596747
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9831460674157303,
+  "pixel_auroc": 0.9902419949791154,
+  "aupro": 0.9420871533041968,
+  "calibrated": {
+   "threshold": 36.703369140625,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.07865168539325842
+  },
+  "oracle_f1": {
+   "threshold": 33.48847961425781,
+   "false_alarm_rate": 0.03571428571428571,
+   "miss_rate": 0.033707865168539325
+  },
+  "latency": {
+   "median_ms": 92.32839199830778,
+   "p95_ms": 99.86346069927095
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 416.5,
+  "model_rebank_head-fp32.onnx": 416.5,
+  "ov_fp32.bin": 258.0,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 223.4,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 223.4,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 104.5,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 64.8,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9835473515248795,
+  "pixel_auroc": 0.9905397577828913,
+  "aupro": 0.9446110778090437,
+  "calibrated": {
+   "threshold": 36.904502868652344,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.07865168539325842
+  },
+  "oracle_f1": {
+   "threshold": 33.64826583862305,
+   "false_alarm_rate": 0.03571428571428571,
+   "miss_rate": 0.033707865168539325
+  },
+  "latency": {
+   "median_ms": 75.10396449652035,
+   "p95_ms": 79.5632052628207
+  },
+  "bank": [
+   25804,
+   1536
+  ]
+ },
+ "service": {
+  "category": "carpet",
+  "n_test": 117,
+  "n_defect": 89,
+  "n_calib": 28,
+  "image_auroc": 0.9835473515248795,
+  "pixel_auroc": 0.9905322357320792,
+  "aupro": 0.9449316551069741,
+  "calibrated": {
+   "threshold": 36.9390869140625,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.07865168539325842
+  },
+  "oracle_f1": {
+   "threshold": 33.846954345703125,
+   "false_alarm_rate": 0.03571428571428571,
+   "miss_rate": 0.033707865168539325
+  },
+  "latency": {
+   "median_ms": 92.95882300648373,
+   "p95_ms": 98.51566214201739
+  }
+ }
+}

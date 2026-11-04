@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854411407966077,
+  "aupro": 0.9438601549652997,
+  "calibrated": {
+   "threshold": 27.832176208496094,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.06740188598633,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 23.386038999888115,
+   "p95_ms": 23.941086590639316
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854478539372302,
+  "aupro": 0.9438476472720253,
+  "calibrated": {
+   "threshold": 27.859375,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.062496185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 11.178513508639298,
+   "p95_ms": 11.288647830951959
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854433350715328,
+  "aupro": 0.9438525220525178,
+  "calibrated": {
+   "threshold": 27.806428909301758,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.04634475708008,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 20.368008001241833,
+   "p95_ms": 21.442503882281017
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854009616496485,
+  "aupro": 0.9436437332875077,
+  "calibrated": {
+   "threshold": 28.421875,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.124996185302734,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 5.112168000778183,
+   "p95_ms": 5.198612790263724
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854394553773201,
+  "aupro": 0.9438653682094275,
+  "calibrated": {
+   "threshold": 27.813678741455078,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.05971908569336,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 239.37611799919978,
+   "p95_ms": 272.501202848798
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854394413782572,
+  "aupro": 0.9438652450475177,
+  "calibrated": {
+   "threshold": 27.813661575317383,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.05976867675781,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 172.0417644828558,
+   "p95_ms": 174.1890544144553
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9854394382756985,
+  "aupro": 0.9438652658852242,
+  "calibrated": {
+   "threshold": 27.81359100341797,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.0596923828125,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 154.34629500668962,
+   "p95_ms": 159.05778945743805
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 0.9722222222222222,
+  "pixel_auroc": 0.9388447530573394,
+  "aupro": 0.7813870525017624,
+  "calibrated": {
+   "threshold": 51.320186614990234,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.2857142857142857
+  },
+  "oracle_f1": {
+   "threshold": 34.78971481323242,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 68.68936300452333,
+   "p95_ms": 71.36972934094956
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9856738526622695,
+  "aupro": 0.9436694339430454,
+  "calibrated": {
+   "threshold": 28.498363494873047,
+   "false_alarm_rate": 0.15,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.355010986328125,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 152.4354605062399,
+   "p95_ms": 154.2092634961591
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 0.9873015873015872,
+  "pixel_auroc": 0.9829323105464823,
+  "aupro": 0.9272256644732196,
+  "calibrated": {
+   "threshold": 51.088226318359375,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.15873015873015872
+  },
+  "oracle_f1": {
+   "threshold": 39.111053466796875,
+   "false_alarm_rate": 0.05,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 72.9721674870234,
+   "p95_ms": 82.03458225470968
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 336.0,
+  "model_rebank_head-fp32.onnx": 336.0,
+  "ov_fp32.bin": 217.7,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 173.0,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 173.0,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 84.3,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 54.7,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9855864528585919,
+  "aupro": 0.9435559450482178,
+  "calibrated": {
+   "threshold": 28.580793380737305,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.089115142822266,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 60.32238200714346,
+   "p95_ms": 62.24078773520886
+  },
+  "bank": [
+   19251,
+   1536
+  ]
+ },
+ "service": {
+  "category": "bottle",
+  "n_test": 83,
+  "n_defect": 63,
+  "n_calib": 21,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9853597377329313,
+  "aupro": 0.9429731076400955,
+  "calibrated": {
+   "threshold": 29.40449333190918,
+   "false_alarm_rate": 0.1,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 38.422943115234375,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 75.25575047475286,
+   "p95_ms": 80.21687225700589
+  }
+ }
+}

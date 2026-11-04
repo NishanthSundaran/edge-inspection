@@ -1,0 +1,351 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9676163148186103,
+  "pixel_auroc": 0.9878135407907348,
+  "aupro": 0.9346468767830317,
+  "calibrated": {
+   "threshold": 35.1213493347168,
+   "false_alarm_rate": 0.04878048780487805,
+   "miss_rate": 0.2857142857142857
+  },
+  "oracle_f1": {
+   "threshold": 30.3936767578125,
+   "false_alarm_rate": 0.21951219512195122,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 32.636519987136126,
+   "p95_ms": 35.35593804845121
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9686411149825783,
+  "pixel_auroc": 0.9878147029745549,
+  "aupro": 0.9345115423207947,
+  "calibrated": {
+   "threshold": 35.15625,
+   "false_alarm_rate": 0.024390243902439025,
+   "miss_rate": 0.3025210084033613
+  },
+  "oracle_f1": {
+   "threshold": 30.468748092651367,
+   "false_alarm_rate": 0.21951219512195122,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 14.669244512333535,
+   "p95_ms": 15.478973904100712
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9676163148186103,
+  "pixel_auroc": 0.9877982440503463,
+  "aupro": 0.9345649229947675,
+  "calibrated": {
+   "threshold": 35.110904693603516,
+   "false_alarm_rate": 0.04878048780487805,
+   "miss_rate": 0.2857142857142857
+  },
+  "oracle_f1": {
+   "threshold": 30.400344848632812,
+   "false_alarm_rate": 0.21951219512195122,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 28.14829100680072,
+   "p95_ms": 28.59056845190935
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9671039147366264,
+  "pixel_auroc": 0.9880144945399529,
+  "aupro": 0.9359683471347107,
+  "calibrated": {
+   "threshold": 35.15625,
+   "false_alarm_rate": 0.04878048780487805,
+   "miss_rate": 0.2605042016806723
+  },
+  "oracle_f1": {
+   "threshold": 30.265623092651367,
+   "false_alarm_rate": 0.2682926829268293,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 6.327982991933823,
+   "p95_ms": 6.380358830210753
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9682311949169913,
+  "pixel_auroc": 0.9878238240574602,
+  "aupro": 0.93470293287769,
+  "calibrated": {
+   "threshold": 35.127586364746094,
+   "false_alarm_rate": 0.04878048780487805,
+   "miss_rate": 0.2857142857142857
+  },
+  "oracle_f1": {
+   "threshold": 30.383026123046875,
+   "false_alarm_rate": 0.21951219512195122,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 344.6152215037728,
+   "p95_ms": 356.8820564963971
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9682311949169913,
+  "pixel_auroc": 0.9878238247631052,
+  "aupro": 0.9347027977567887,
+  "calibrated": {
+   "threshold": 35.1275634765625,
+   "false_alarm_rate": 0.04878048780487805,
+   "miss_rate": 0.2857142857142857
+  },
+  "oracle_f1": {
+   "threshold": 30.383026123046875,
+   "false_alarm_rate": 0.21951219512195122,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 244.1186605137773,
+   "p95_ms": 248.41739791590953
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9682311949169913,
+  "pixel_auroc": 0.9878238114545547,
+  "aupro": 0.9347028191651832,
+  "calibrated": {
+   "threshold": 35.12753677368164,
+   "false_alarm_rate": 0.04878048780487805,
+   "miss_rate": 0.2857142857142857
+  },
+  "oracle_f1": {
+   "threshold": 30.383106231689453,
+   "false_alarm_rate": 0.21951219512195122,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 222.5435200089123,
+   "p95_ms": 232.39012600388375
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.7702398032383685,
+  "pixel_auroc": 0.96616894873878,
+  "aupro": 0.8700003605969266,
+  "calibrated": {
+   "threshold": 43.64469909667969,
+   "false_alarm_rate": 0.07317073170731707,
+   "miss_rate": 0.8823529411764706
+  },
+  "oracle_f1": {
+   "threshold": 9.723602294921875,
+   "false_alarm_rate": 0.926829268292683,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 98.98852001060732,
+   "p95_ms": 104.78463566541903
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9665915146546423,
+  "pixel_auroc": 0.9854969753980823,
+  "aupro": 0.9239434237149728,
+  "calibrated": {
+   "threshold": 35.35265350341797,
+   "false_alarm_rate": 0.04878048780487805,
+   "miss_rate": 0.2773109243697479
+  },
+  "oracle_f1": {
+   "threshold": 30.305343627929688,
+   "false_alarm_rate": 0.2682926829268293,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 222.14350951253437,
+   "p95_ms": 226.64945539290784
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.8766140602582496,
+  "pixel_auroc": 0.9797755667544651,
+  "aupro": 0.9128704278184012,
+  "calibrated": {
+   "threshold": 48.78657913208008,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.9411764705882353
+  },
+  "oracle_f1": {
+   "threshold": 34.916080474853516,
+   "false_alarm_rate": 0.36585365853658536,
+   "miss_rate": 0.05042016806722689
+  },
+  "latency": {
+   "median_ms": 101.67356449528597,
+   "p95_ms": 105.51630453555845
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 461.8,
+  "model_rebank_backbone.onnx": 461.8,
+  "model_rebank_head-fp32.onnx": 461.8,
+  "ov_fp32.bin": 280.7,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_backbone.bin": 206.3,
+  "ov_int8_backbone.xml": 0.4,
+  "ov_int8_backbone_rebank.bin": 206.3,
+  "ov_int8_backbone_rebank.xml": 0.4,
+  "ov_int8_head-fp32.bin": 251.7,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 251.7,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 115.8,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 70.5,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-backbone": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9219102275056364,
+  "pixel_auroc": 0.980206253847677,
+  "aupro": 0.9143892122433954,
+  "calibrated": {
+   "threshold": 48.716888427734375,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.9411764705882353
+  },
+  "oracle_f1": {
+   "threshold": 35.02940368652344,
+   "false_alarm_rate": 0.2926829268292683,
+   "miss_rate": 0.07563025210084033
+  },
+  "latency": {
+   "median_ms": 199.14903199241962,
+   "p95_ms": 207.35126158979256
+  }
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9048985447837672,
+  "pixel_auroc": 0.984764319077777,
+  "aupro": 0.9198693230820126,
+  "calibrated": {
+   "threshold": 38.77943420410156,
+   "false_alarm_rate": 0.024390243902439025,
+   "miss_rate": 0.5378151260504201
+  },
+  "oracle_f1": {
+   "threshold": 30.932111740112305,
+   "false_alarm_rate": 0.36585365853658536,
+   "miss_rate": 0.01680672268907563
+  },
+  "latency": {
+   "median_ms": 83.81243549229112,
+   "p95_ms": 96.24976729828632
+  },
+  "bank": [
+   29491,
+   1536
+  ]
+ },
+ "openvino-cpu-int8-backbone-rebank": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9407665505226481,
+  "pixel_auroc": 0.9856154629976844,
+  "aupro": 0.9247151016019922,
+  "calibrated": {
+   "threshold": 33.97254180908203,
+   "false_alarm_rate": 0.12195121951219512,
+   "miss_rate": 0.16806722689075632
+  },
+  "oracle_f1": {
+   "threshold": 30.98579978942871,
+   "false_alarm_rate": 0.1951219512195122,
+   "miss_rate": 0.04201680672268908
+  },
+  "latency": {
+   "median_ms": 197.46364500315394,
+   "p95_ms": 201.40927586180624
+  },
+  "bank": [
+   29491,
+   1536
+  ]
+ },
+ "service": {
+  "category": "screw",
+  "n_test": 160,
+  "n_defect": 119,
+  "n_calib": 32,
+  "image_auroc": 0.9659766345562616,
+  "pixel_auroc": 0.9881883469593171,
+  "aupro": 0.9368399200712724,
+  "calibrated": {
+   "threshold": 35.09209060668945,
+   "false_alarm_rate": 0.024390243902439025,
+   "miss_rate": 0.2857142857142857
+  },
+  "oracle_f1": {
+   "threshold": 30.27666473388672,
+   "false_alarm_rate": 0.2682926829268293,
+   "miss_rate": 0.008403361344537815
+  },
+  "latency": {
+   "median_ms": 245.21862251276616,
+   "p95_ms": 254.12013950844994
+  }
+ }
+}

@@ -31,8 +31,11 @@ def build(name: str, category: str, args):
     from anomalib import models
     if name == "patchcore":
         patches.patchcore_cpu_bank()
+        kw = {}
+        if getattr(args, "image_size", None):
+            kw["pre_processor"] = models.Patchcore.configure_pre_processor(image_size=(args.image_size,) * 2)
         return models.Patchcore(backbone=args.backbone or "wide_resnet50_2", coreset_sampling_ratio=args.coreset,
-                                evaluator=False, visualizer=False, post_processor=False)
+                                evaluator=False, visualizer=False, post_processor=False, **kw)
     if name == "padim":
         return models.Padim(backbone=args.backbone or "resnet18", evaluator=False, visualizer=False,
                             post_processor=False)
@@ -70,6 +73,7 @@ def main() -> None:
     ap.add_argument("--backbone", default=None)
     ap.add_argument("--coreset", type=float, default=0.1)
     ap.add_argument("--size", default=None, help="EfficientAD model size")
+    ap.add_argument("--image-size", type=int, default=None, help="PatchCore input size (default 256)")
     ap.add_argument("--k-shot", type=int, default=0)
     ap.add_argument("--max-steps", type=int, default=-1)
     ap.add_argument("--full-train", action="store_true", help="train on all good images (published setting)")

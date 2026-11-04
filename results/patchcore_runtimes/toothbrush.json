@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9055555555555556,
+  "pixel_auroc": 0.9885968194800423,
+  "aupro": 0.8782211275749657,
+  "calibrated": {
+   "threshold": 32.4537467956543,
+   "false_alarm_rate": 0.3333333333333333,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.352943420410156,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 11.338063020957634,
+   "p95_ms": 11.500204550975468
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9055555555555556,
+  "pixel_auroc": 0.9886219978606912,
+  "aupro": 0.8785753253753864,
+  "calibrated": {
+   "threshold": 32.5,
+   "false_alarm_rate": 0.3333333333333333,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.406246185302734,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 6.930628485861234,
+   "p95_ms": 7.036669303488452
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9055555555555556,
+  "pixel_auroc": 0.9885970866662444,
+  "aupro": 0.8781647068519766,
+  "calibrated": {
+   "threshold": 32.462589263916016,
+   "false_alarm_rate": 0.3333333333333333,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.35914611816406,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 10.048414478660561,
+   "p95_ms": 10.118110995972529
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9083333333333333,
+  "pixel_auroc": 0.9885309813578165,
+  "aupro": 0.87718049536149,
+  "calibrated": {
+   "threshold": 32.125,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.062496185302734,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 2.958100492833182,
+   "p95_ms": 3.0086752551142126
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9055555555555556,
+  "pixel_auroc": 0.9885935299436822,
+  "aupro": 0.8780888310131291,
+  "calibrated": {
+   "threshold": 32.4482307434082,
+   "false_alarm_rate": 0.3333333333333333,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.33916473388672,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 100.50677649269346,
+   "p95_ms": 101.62129638629267
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9055555555555556,
+  "pixel_auroc": 0.988593531302962,
+  "aupro": 0.8780888741964068,
+  "calibrated": {
+   "threshold": 32.44825744628906,
+   "false_alarm_rate": 0.3333333333333333,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.33921813964844,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 69.86314299865626,
+   "p95_ms": 70.51801031338982
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9055555555555556,
+  "pixel_auroc": 0.9885935224062556,
+  "aupro": 0.8780886999150858,
+  "calibrated": {
+   "threshold": 32.44852828979492,
+   "false_alarm_rate": 0.3333333333333333,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.33915710449219,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 72.51893349166494,
+   "p95_ms": 74.9556848866632
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.8999999999999999,
+  "pixel_auroc": 0.9692529451545748,
+  "aupro": 0.7472628452803253,
+  "calibrated": {
+   "threshold": 35.74886703491211,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.16666666666666666
+  },
+  "oracle_f1": {
+   "threshold": 34.81938552856445,
+   "false_alarm_rate": 0.4166666666666667,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 27.383567998185754,
+   "p95_ms": 30.782309155620165
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9055555555555556,
+  "pixel_auroc": 0.9879839461913251,
+  "aupro": 0.8661538608681983,
+  "calibrated": {
+   "threshold": 32.62370681762695,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "oracle_f1": {
+   "threshold": 34.319637298583984,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 70.22862748999614,
+   "p95_ms": 77.21303934085881
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9138888888888889,
+  "pixel_auroc": 0.9852680726863776,
+  "aupro": 0.7944855079448925,
+  "calibrated": {
+   "threshold": 36.39381790161133,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.06666666666666667
+  },
+  "oracle_f1": {
+   "threshold": 35.850364685058594,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 31.50595451006666,
+   "p95_ms": 34.677159298735205
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 162.4,
+  "model_rebank_head-fp32.onnx": 162.4,
+  "ov_fp32.bin": 130.9,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 64.3,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 64.3,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 40.8,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 32.9,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 0.9333333333333333,
+  "pixel_auroc": 0.9884974506053877,
+  "aupro": 0.8740622240206649,
+  "calibrated": {
+   "threshold": 33.993988037109375,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.03333333333333333
+  },
+  "oracle_f1": {
+   "threshold": 33.443538665771484,
+   "false_alarm_rate": 0.25,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 28.05309751420282,
+   "p95_ms": 28.39144034514902
+  },
+  "bank": [
+   5120,
+   1536
+  ]
+ },
+ "service": {
+  "category": "toothbrush",
+  "n_test": 42,
+  "n_defect": 30,
+  "n_calib": 10,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9883693698010525,
+  "aupro": 0.9020880160747458,
+  "calibrated": {
+   "threshold": 33.27457046508789,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.03333333333333333
+  },
+  "oracle_f1": {
+   "threshold": 32.52241134643555,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 39.88888750609476,
+   "p95_ms": 41.626631798862945
+  }
+ }
+}

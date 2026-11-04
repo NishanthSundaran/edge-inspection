@@ -1,0 +1,351 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9716792979656961,
+  "pixel_auroc": 0.9897993103345759,
+  "aupro": 0.9215613303840224,
+  "calibrated": {
+   "threshold": 35.82979965209961,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.48623853211009177
+  },
+  "oracle_f1": {
+   "threshold": 27.283245086669922,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.027522935779816515
+  },
+  "latency": {
+   "median_ms": 24.287549007567577,
+   "p95_ms": 25.03657544439193
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9732748304746709,
+  "pixel_auroc": 0.9897838703445878,
+  "aupro": 0.9210682894582445,
+  "calibrated": {
+   "threshold": 35.875,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.48623853211009177
+  },
+  "oracle_f1": {
+   "threshold": 25.734373092651367,
+   "false_alarm_rate": 0.13043478260869565,
+   "miss_rate": 0.009174311926605505
+  },
+  "latency": {
+   "median_ms": 10.978017002344131,
+   "p95_ms": 11.69338439940475
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9720781810929398,
+  "pixel_auroc": 0.9897980756513581,
+  "aupro": 0.9215542640149749,
+  "calibrated": {
+   "threshold": 35.80931854248047,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.48623853211009177
+  },
+  "oracle_f1": {
+   "threshold": 27.288694381713867,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.027522935779816515
+  },
+  "latency": {
+   "median_ms": 20.841217003180645,
+   "p95_ms": 20.98769740696298
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9720781810929398,
+  "pixel_auroc": 0.9897346507083582,
+  "aupro": 0.9213651940374525,
+  "calibrated": {
+   "threshold": 36.375,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.4954128440366973
+  },
+  "oracle_f1": {
+   "threshold": 26.609373092651367,
+   "false_alarm_rate": 0.08695652173913043,
+   "miss_rate": 0.01834862385321101
+  },
+  "latency": {
+   "median_ms": 4.983889011782594,
+   "p95_ms": 5.0488562061218545
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9724770642201835,
+  "pixel_auroc": 0.9897919593636753,
+  "aupro": 0.9215579400092438,
+  "calibrated": {
+   "threshold": 35.891414642333984,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.48623853211009177
+  },
+  "oracle_f1": {
+   "threshold": 27.283178329467773,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.027522935779816515
+  },
+  "latency": {
+   "median_ms": 246.43516549258493,
+   "p95_ms": 251.79769090318587
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9724770642201835,
+  "pixel_auroc": 0.9897919515751796,
+  "aupro": 0.9215578506758603,
+  "calibrated": {
+   "threshold": 35.891448974609375,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.48623853211009177
+  },
+  "oracle_f1": {
+   "threshold": 27.283123016357422,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.027522935779816515
+  },
+  "latency": {
+   "median_ms": 178.5536215029424,
+   "p95_ms": 182.1911990555236
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9724770642201835,
+  "pixel_auroc": 0.9897919624404657,
+  "aupro": 0.9215576046735837,
+  "calibrated": {
+   "threshold": 35.891380310058594,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.48623853211009177
+  },
+  "oracle_f1": {
+   "threshold": 27.283321380615234,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.027522935779816515
+  },
+  "latency": {
+   "median_ms": 159.81476700108033,
+   "p95_ms": 172.91892229841324
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.6011168727562824,
+  "pixel_auroc": 0.9534938079667327,
+  "aupro": 0.782958336216724,
+  "calibrated": {
+   "threshold": 42.13121795654297,
+   "false_alarm_rate": 0.13043478260869565,
+   "miss_rate": 0.6605504587155964
+  },
+  "oracle_f1": {
+   "threshold": 24.144123077392578,
+   "false_alarm_rate": 1.0,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 74.03255900135264,
+   "p95_ms": 76.59932850074256
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9672915835660152,
+  "pixel_auroc": 0.9889517628530696,
+  "aupro": 0.9176236296803372,
+  "calibrated": {
+   "threshold": 36.236942291259766,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.48623853211009177
+  },
+  "oracle_f1": {
+   "threshold": 27.214576721191406,
+   "false_alarm_rate": 0.17391304347826086,
+   "miss_rate": 0.009174311926605505
+  },
+  "latency": {
+   "median_ms": 158.69062050478533,
+   "p95_ms": 166.48419115517754
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.6422018348623855,
+  "pixel_auroc": 0.963608255243257,
+  "aupro": 0.8036873352533481,
+  "calibrated": {
+   "threshold": 43.76148986816406,
+   "false_alarm_rate": 0.21739130434782608,
+   "miss_rate": 0.6055045871559633
+  },
+  "oracle_f1": {
+   "threshold": 38.12748336791992,
+   "false_alarm_rate": 0.9565217391304348,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 74.56904099672101,
+   "p95_ms": 78.39791175356368
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 347.3,
+  "model_rebank_backbone.onnx": 347.3,
+  "model_rebank_head-fp32.onnx": 347.3,
+  "ov_fp32.bin": 223.4,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_backbone.bin": 149.0,
+  "ov_int8_backbone.xml": 0.4,
+  "ov_int8_backbone_rebank.bin": 149.0,
+  "ov_int8_backbone_rebank.xml": 0.4,
+  "ov_int8_head-fp32.bin": 180.1,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 180.1,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 87.1,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 56.1,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-backbone": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.6469884323893099,
+  "pixel_auroc": 0.9636603522684883,
+  "aupro": 0.8046114463476897,
+  "calibrated": {
+   "threshold": 43.69465637207031,
+   "false_alarm_rate": 0.21739130434782608,
+   "miss_rate": 0.5871559633027523
+  },
+  "oracle_f1": {
+   "threshold": 38.18647003173828,
+   "false_alarm_rate": 0.9565217391304348,
+   "miss_rate": 0.0
+  },
+  "latency": {
+   "median_ms": 153.27770050498657,
+   "p95_ms": 172.38437756459462
+  }
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9708815317112087,
+  "pixel_auroc": 0.9890017754828133,
+  "aupro": 0.919628501824484,
+  "calibrated": {
+   "threshold": 35.62997817993164,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.5137614678899083
+  },
+  "oracle_f1": {
+   "threshold": 27.009328842163086,
+   "false_alarm_rate": 0.08695652173913043,
+   "miss_rate": 0.01834862385321101
+  },
+  "latency": {
+   "median_ms": 61.10127750434913,
+   "p95_ms": 63.760909145639744
+  },
+  "bank": [
+   20172,
+   1536
+  ]
+ },
+ "openvino-cpu-int8-backbone-rebank": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.974471479856402,
+  "pixel_auroc": 0.9893808564682299,
+  "aupro": 0.9202653909543476,
+  "calibrated": {
+   "threshold": 36.737205505371094,
+   "false_alarm_rate": 0.0,
+   "miss_rate": 0.5504587155963303
+  },
+  "oracle_f1": {
+   "threshold": 27.339134216308594,
+   "false_alarm_rate": 0.08695652173913043,
+   "miss_rate": 0.01834862385321101
+  },
+  "latency": {
+   "median_ms": 137.6197404897539,
+   "p95_ms": 143.98987166059666
+  },
+  "bank": [
+   20172,
+   1536
+  ]
+ },
+ "service": {
+  "category": "capsule",
+  "n_test": 132,
+  "n_defect": 109,
+  "n_calib": 22,
+  "image_auroc": 0.9684882329477463,
+  "pixel_auroc": 0.9898270346800535,
+  "aupro": 0.9269216211281808,
+  "calibrated": {
+   "threshold": 33.97350311279297,
+   "false_alarm_rate": 0.043478260869565216,
+   "miss_rate": 0.46788990825688076
+  },
+  "oracle_f1": {
+   "threshold": 25.333877563476562,
+   "false_alarm_rate": 0.13043478260869565,
+   "miss_rate": 0.01834862385321101
+  },
+  "latency": {
+   "median_ms": 82.08408301288728,
+   "p95_ms": 86.76509831129806
+  }
+ }
+}

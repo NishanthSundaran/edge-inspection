@@ -1,0 +1,296 @@
+{
+ "pytorch-cuda-fp32": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9874437781109445,
+  "pixel_auroc": 0.9848054348058564,
+  "aupro": 0.9299667102427654,
+  "calibrated": {
+   "threshold": 44.42300796508789,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.4346809387207,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 25.114472009590827,
+   "p95_ms": 25.62191310134949
+  }
+ },
+ "pytorch-cuda-fp16": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9878185907046477,
+  "pixel_auroc": 0.9847934892501524,
+  "aupro": 0.9298949728409178,
+  "calibrated": {
+   "threshold": 44.53125,
+   "false_alarm_rate": 0.017241379310344827,
+   "miss_rate": 0.09782608695652174
+  },
+  "oracle_f1": {
+   "threshold": 43.437496185302734,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 11.462152018793859,
+   "p95_ms": 12.89573325339006
+  }
+ },
+ "ort-cuda-fp32": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9876311844077961,
+  "pixel_auroc": 0.9848054787653167,
+  "aupro": 0.9299360744219167,
+  "calibrated": {
+   "threshold": 44.41895294189453,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.429710388183594,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 21.224367505055852,
+   "p95_ms": 22.066426144738216
+  }
+ },
+ "ort-tensorrt-fp16": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9869752623688156,
+  "pixel_auroc": 0.9847857363632332,
+  "aupro": 0.9300186390312641,
+  "calibrated": {
+   "threshold": 44.28125,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.343746185302734,
+   "false_alarm_rate": 0.06896551724137931,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 5.03380001464393,
+   "p95_ms": 5.091704698861577
+  }
+ },
+ "pytorch-cpu-fp32": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9876311844077961,
+  "pixel_auroc": 0.9848043554680399,
+  "aupro": 0.9299679524686733,
+  "calibrated": {
+   "threshold": 44.41707229614258,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.422725677490234,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 251.1803254892584,
+   "p95_ms": 269.5240414046566
+  }
+ },
+ "ort-cpu-fp32": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9876311844077961,
+  "pixel_auroc": 0.9848043543828566,
+  "aupro": 0.9299679233927165,
+  "calibrated": {
+   "threshold": 44.416996002197266,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.42274856567383,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 182.75922049360815,
+   "p95_ms": 196.6539223023574
+  }
+ },
+ "openvino-cpu-fp32": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9876311844077961,
+  "pixel_auroc": 0.9848043393318584,
+  "aupro": 0.9299679691539153,
+  "calibrated": {
+   "threshold": 44.41710662841797,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.422645568847656,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 162.93237201170996,
+   "p95_ms": 168.74320809729397
+  }
+ },
+ "openvino-cpu-int8-naive": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9827586206896552,
+  "pixel_auroc": 0.9839502656117758,
+  "aupro": 0.9281276757823642,
+  "calibrated": {
+   "threshold": 45.23222732543945,
+   "false_alarm_rate": 0.017241379310344827,
+   "miss_rate": 0.13043478260869565
+  },
+  "oracle_f1": {
+   "threshold": 43.610130310058594,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 73.63669350161217,
+   "p95_ms": 77.67226204596227
+  }
+ },
+ "openvino-cpu-int8-weights": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9861319340329835,
+  "pixel_auroc": 0.9847000713832139,
+  "aupro": 0.9288353622260576,
+  "calibrated": {
+   "threshold": 44.59531021118164,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.13718032836914,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 161.9161314883968,
+   "p95_ms": 179.3191482516704
+  }
+ },
+ "openvino-cpu-int8-head-fp32": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9857571214392803,
+  "pixel_auroc": 0.9839656344770609,
+  "aupro": 0.9268512301912678,
+  "calibrated": {
+   "threshold": 45.212730407714844,
+   "false_alarm_rate": 0.017241379310344827,
+   "miss_rate": 0.13043478260869565
+  },
+  "oracle_f1": {
+   "threshold": 43.57516098022461,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 76.7803974886192,
+   "p95_ms": 79.29313153581461
+  }
+ },
+ "_files_mb": {
+  "model.onnx": 353.6,
+  "model_rebank_head-fp32.onnx": 353.6,
+  "ov_fp32.bin": 226.5,
+  "ov_fp32.xml": 0.2,
+  "ov_int8_head-fp32.bin": 184.0,
+  "ov_int8_head-fp32.xml": 0.4,
+  "ov_int8_head-fp32_rebank.bin": 184.0,
+  "ov_int8_head-fp32_rebank.xml": 0.4,
+  "ov_int8_naive.bin": 88.7,
+  "ov_int8_naive.xml": 0.4,
+  "ov_int8_weights.bin": 56.9,
+  "ov_int8_weights.xml": 0.4
+ },
+ "openvino-cpu-int8-head-fp32-rebank": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9870689655172414,
+  "pixel_auroc": 0.9844147464106877,
+  "aupro": 0.926552292746951,
+  "calibrated": {
+   "threshold": 44.29481887817383,
+   "false_alarm_rate": 0.034482758620689655,
+   "miss_rate": 0.09782608695652174
+  },
+  "oracle_f1": {
+   "threshold": 43.69164276123047,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 63.75031000061426,
+   "p95_ms": 72.74049235857092
+  },
+  "bank": [
+   20684,
+   1536
+  ]
+ },
+ "service": {
+  "category": "cable",
+  "n_test": 150,
+  "n_defect": 92,
+  "n_calib": 22,
+  "image_auroc": 0.9861319340329835,
+  "pixel_auroc": 0.9844327740450143,
+  "aupro": 0.9262725886543218,
+  "calibrated": {
+   "threshold": 44.05766677856445,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.07608695652173914
+  },
+  "oracle_f1": {
+   "threshold": 43.303863525390625,
+   "false_alarm_rate": 0.05172413793103448,
+   "miss_rate": 0.021739130434782608
+  },
+  "latency": {
+   "median_ms": 78.014176004217,
+   "p95_ms": 82.34065271535655
+  }
+ }
+}
