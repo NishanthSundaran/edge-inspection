@@ -1,0 +1,32 @@
+{
+ "category": "grid",
+ "n_test": 78,
+ "n_defect": 57,
+ "n_calib": 26,
+ "image_auroc": 0.9916457811194654,
+ "pixel_auroc": 0.7947194678666489,
+ "aupro": 0.5028179516891852,
+ "calibrated": {
+  "threshold": 0.409701943397522,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.15789473684210525
+ },
+ "oracle_f1": {
+  "threshold": 0.38420191407203674,
+  "false_alarm_rate": 0.047619047619047616,
+  "miss_rate": 0.017543859649122806
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 666.6514974931488,
+  "p95_ms": 674.6038302575471
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

@@ -1,0 +1,32 @@
+{
+ "category": "wood",
+ "n_test": 79,
+ "n_defect": 60,
+ "n_calib": 25,
+ "image_auroc": 0.9692982456140351,
+ "pixel_auroc": 0.916565021843216,
+ "aupro": 0.873680738658063,
+ "calibrated": {
+  "threshold": 55.632972717285156,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.15
+ },
+ "oracle_f1": {
+  "threshold": 42.975990295410156,
+  "false_alarm_rate": 0.05263157894736842,
+  "miss_rate": 0.08333333333333333
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.7046975010307506,
+  "p95_ms": 2.7809754479676485
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

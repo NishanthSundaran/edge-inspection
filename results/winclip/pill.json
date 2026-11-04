@@ -1,0 +1,32 @@
+{
+ "category": "pill",
+ "n_test": 167,
+ "n_defect": 141,
+ "n_calib": 27,
+ "image_auroc": 0.8120567375886525,
+ "pixel_auroc": 0.7284819828923438,
+ "aupro": 0.6759102026803031,
+ "calibrated": {
+  "threshold": 0.468458890914917,
+  "false_alarm_rate": 0.038461538461538464,
+  "miss_rate": 0.5177304964539007
+ },
+ "oracle_f1": {
+  "threshold": 0.3868037760257721,
+  "false_alarm_rate": 1.0,
+  "miss_rate": 0.0
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.5,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 658.5989329905715,
+  "p95_ms": 665.9741947005386
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

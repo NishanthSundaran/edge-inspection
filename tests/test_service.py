@@ -61,3 +61,28 @@ def test_preprocess_matches_training_resize():
     a = preprocess(Image.fromarray(rgb), 64)[0]
     b = resize(rgb, 64).numpy()
     assert np.abs(a - b).max() < 2 / 255
+
+
+def test_calibrate_sets_threshold_from_good_parts(client):
+    files = [("files", (f"{v}.png", _png(v), "image/png")) for v in range(60, 72)]
+    r = client.post("/calibrate/tiny", files=files).json()
+    s = np.arange(60, 72) / 255
+    assert r["n"] == 12 and r["threshold"] == pytest.approx(s.mean() + 2.326 * s.std(ddof=1), abs=1e-3)
+    assert client.post("/inspect/tiny", files={"file": ("a.png", _png(100), "image/png")}).json()["defect"] is True
+    few = [("files", ("a.png", _png(60), "image/png"))] * 3
+    assert client.post("/calibrate/tiny", files=few).status_code == 422
+
+
+def test_roi_ignores_a_spot_off_the_part(tmp_path):
+    from edgeinspect.serving import InspectionModel
+    _tiny_model(tmp_path)
+    tmpl = np.zeros((S, S), np.uint8)
+    tmpl[8:24, 8:24] = 255
+    Image.fromarray(tmpl).save(tmp_path / "roi_template.png")
+    img = np.zeros((S, S, 3), np.uint8)
+    img[8:24, 8:24] = 100                      # the part: grey, below the 0.5 threshold
+    img[29:31, 29:31] = 255                    # a bright speck on the background, off the part
+    v = InspectionModel(tmp_path)(Image.fromarray(img))
+    assert v.score == pytest.approx(100 / 255, abs=2e-3) and v.defect is False
+    img[14:16, 14:16] = 255                    # the same speck on the part is judged
+    assert InspectionModel(tmp_path)(Image.fromarray(img)).defect is True

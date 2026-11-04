@@ -1,0 +1,32 @@
+{
+ "category": "cable",
+ "n_test": 150,
+ "n_defect": 92,
+ "n_calib": 22,
+ "image_auroc": 0.8504497751124437,
+ "pixel_auroc": 0.6120600790963283,
+ "aupro": 0.40359521030094125,
+ "calibrated": {
+  "threshold": 0.45097243785858154,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.7065217391304348
+ },
+ "oracle_f1": {
+  "threshold": 0.4187561869621277,
+  "false_alarm_rate": 0.3275862068965517,
+  "miss_rate": 0.11956521739130435
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.1,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 674.8244795016944,
+  "p95_ms": 682.5633220985765
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

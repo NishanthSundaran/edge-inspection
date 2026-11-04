@@ -1,0 +1,32 @@
+{
+ "category": "metal_nut",
+ "n_test": 115,
+ "n_defect": 93,
+ "n_calib": 22,
+ "image_auroc": 0.998533724340176,
+ "pixel_auroc": 0.9864875105876706,
+ "aupro": 0.9399720964469856,
+ "calibrated": {
+  "threshold": 37.36976623535156,
+  "false_alarm_rate": 0.2727272727272727,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 40.45534133911133,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.010752688172043012
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore",
+ "fit_s": 96.2,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 25.97621599852573,
+  "p95_ms": 27.296848339028656
+ },
+ "params": 24862528,
+ "buffers_mb": 124.7,
+ "ckpt_mb": 224.3
+}

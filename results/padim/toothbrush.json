@@ -1,0 +1,32 @@
+{
+ "category": "toothbrush",
+ "n_test": 42,
+ "n_defect": 30,
+ "n_calib": 10,
+ "image_auroc": 0.8583333333333333,
+ "pixel_auroc": 0.9883017586954708,
+ "aupro": 0.9012797393013428,
+ "calibrated": {
+  "threshold": 86.60491943359375,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.4666666666666667
+ },
+ "oracle_f1": {
+  "threshold": 43.398895263671875,
+  "false_alarm_rate": 0.4166666666666667,
+  "miss_rate": 0.0
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 2.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.70236749202013,
+  "p95_ms": 2.7529271043022163
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

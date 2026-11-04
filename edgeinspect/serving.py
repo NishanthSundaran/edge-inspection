@@ -33,13 +33,16 @@ class Verdict:
 
 class InspectionModel:
     """One category's deployed model: `<dir>/model.xml` (OpenVINO IR) or `model.onnx`, plus `meta.json`
-    with {"category", "size", "threshold", "runtime", ...}."""
+    with {"category", "size", "threshold", "runtime", ...}, plus an optional `roi_template.png`: then the
+    score is the map's maximum inside the inspection region (edgeinspect/roi.py), not over the frame."""
 
     def __init__(self, model_dir: pathlib.Path, device: str = "CPU"):
         model_dir = pathlib.Path(model_dir)
         self.meta = json.loads((model_dir / "meta.json").read_text())
         self.size = int(self.meta["size"])
         self.threshold = float(self.meta["threshold"])
+        t = model_dir / "roi_template.png"
+        self.roi_template = (np.asarray(Image.open(t).convert("L")) > 127) if t.exists() else None
         xml, onnx = model_dir / "model.xml", model_dir / "model.onnx"
         if xml.exists():
             import openvino as ov
@@ -54,9 +57,17 @@ class InspectionModel:
             raise FileNotFoundError(f"no model.xml or model.onnx in {model_dir}")
 
     def __call__(self, img: Image.Image) -> Verdict:
-        score, amap = self._run(preprocess(img, self.size))
-        s = float(np.asarray(score).reshape(-1)[0])
-        return Verdict(s, self.threshold, s > self.threshold, np.asarray(amap).reshape(self.size, self.size))
+        x = preprocess(img, self.size)
+        score, amap = self._run(x)
+        amap = np.asarray(amap, np.float32).reshape(self.size, self.size)
+        if self.roi_template is None:
+            s = float(np.asarray(score).reshape(-1)[0])
+        else:
+            from .roi import roi
+            r = roi(x[0], self.roi_template)
+            s = float(amap[r].max())
+            amap = np.where(r, amap, np.minimum(amap, self.threshold * 0.5))  # show what is not judged as calm
+        return Verdict(s, self.threshold, s > self.threshold, amap)
 
 
 def heatmap_png(img: Image.Image, amap: np.ndarray, threshold: float, size: int) -> bytes:

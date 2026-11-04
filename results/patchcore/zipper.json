@@ -1,0 +1,32 @@
+{
+ "category": "zipper",
+ "n_test": 151,
+ "n_defect": 119,
+ "n_calib": 24,
+ "image_auroc": 0.9792542016806722,
+ "pixel_auroc": 0.9811117922641043,
+ "aupro": 0.9319105059344235,
+ "calibrated": {
+  "threshold": 25.737550735473633,
+  "false_alarm_rate": 0.25,
+  "miss_rate": 0.008403361344537815
+ },
+ "oracle_f1": {
+  "threshold": 29.520092010498047,
+  "false_alarm_rate": 0.09375,
+  "miss_rate": 0.008403361344537815
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore",
+ "fit_s": 118.1,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 27.91095398424659,
+  "p95_ms": 29.773261680384167
+ },
+ "params": 24862528,
+ "buffers_mb": 136.1,
+ "ckpt_mb": 235.6
+}

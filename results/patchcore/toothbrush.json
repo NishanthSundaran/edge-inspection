@@ -1,0 +1,32 @@
+{
+ "category": "toothbrush",
+ "n_test": 42,
+ "n_defect": 30,
+ "n_calib": 10,
+ "image_auroc": 0.9055555555555556,
+ "pixel_auroc": 0.9885968194800423,
+ "aupro": 0.8782211275749657,
+ "calibrated": {
+  "threshold": 32.4537467956543,
+  "false_alarm_rate": 0.3333333333333333,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 34.352943420410156,
+  "false_alarm_rate": 0.25,
+  "miss_rate": 0.0
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore",
+ "fit_s": 8.1,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.814663987024687,
+  "p95_ms": 11.995092799770646
+ },
+ "params": 24862528,
+ "buffers_mb": 31.6,
+ "ckpt_mb": 131.2
+}

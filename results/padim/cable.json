@@ -1,0 +1,32 @@
+{
+ "category": "cable",
+ "n_test": 150,
+ "n_defect": 92,
+ "n_calib": 22,
+ "image_auroc": 0.883808095952024,
+ "pixel_auroc": 0.9632432403616368,
+ "aupro": 0.8655272219579593,
+ "calibrated": {
+  "threshold": 72.70642852783203,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.8804347826086957
+ },
+ "oracle_f1": {
+  "threshold": 29.749027252197266,
+  "false_alarm_rate": 0.29310344827586204,
+  "miss_rate": 0.08695652173913043
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.7744785038521513,
+  "p95_ms": 2.820463990792632
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

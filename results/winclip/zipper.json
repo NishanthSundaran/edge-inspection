@@ -1,0 +1,32 @@
+{
+ "category": "zipper",
+ "n_test": 151,
+ "n_defect": 119,
+ "n_calib": 24,
+ "image_auroc": 0.9120273109243697,
+ "pixel_auroc": 0.9166900421663828,
+ "aupro": 0.7271261275179715,
+ "calibrated": {
+  "threshold": 0.4214075207710266,
+  "false_alarm_rate": 0.03125,
+  "miss_rate": 0.36134453781512604
+ },
+ "oracle_f1": {
+  "threshold": 0.4062066376209259,
+  "false_alarm_rate": 0.34375,
+  "miss_rate": 0.04201680672268908
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.5,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 655.4557024937822,
+  "p95_ms": 664.6403691920568
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

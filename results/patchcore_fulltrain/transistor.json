@@ -1,0 +1,32 @@
+{
+ "category": "transistor",
+ "n_test": 100,
+ "n_defect": 40,
+ "n_calib": 21,
+ "image_auroc": 0.9920833333333333,
+ "pixel_auroc": 0.9729153578590266,
+ "aupro": 0.9465922698879209,
+ "calibrated": {
+  "threshold": 28.742816925048828,
+  "false_alarm_rate": 1.0,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 37.8999137878418,
+  "false_alarm_rate": 0.03333333333333333,
+  "miss_rate": 0.025
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore_fulltrain",
+ "fit_s": 115.5,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 27.70615101326257,
+  "p95_ms": 29.615858201577794
+ },
+ "params": 24862528,
+ "buffers_mb": 134.2,
+ "ckpt_mb": 233.7
+}

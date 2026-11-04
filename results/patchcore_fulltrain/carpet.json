@@ -1,0 +1,32 @@
+{
+ "category": "carpet",
+ "n_test": 117,
+ "n_defect": 89,
+ "n_calib": 28,
+ "image_auroc": 0.9879614767255216,
+ "pixel_auroc": 0.9905537034386566,
+ "aupro": 0.947335567874469,
+ "calibrated": {
+  "threshold": 21.35975456237793,
+  "false_alarm_rate": 1.0,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 34.38066864013672,
+  "false_alarm_rate": 0.03571428571428571,
+  "miss_rate": 0.02247191011235955
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore_fulltrain",
+ "fit_s": 203.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 35.062882510828786,
+  "p95_ms": 36.71582435927121
+ },
+ "params": 24862528,
+ "buffers_mb": 176.3,
+ "ckpt_mb": 275.9
+}

@@ -1,0 +1,32 @@
+{
+ "category": "tile",
+ "n_test": 117,
+ "n_defect": 84,
+ "n_calib": 23,
+ "image_auroc": 1.0,
+ "pixel_auroc": 0.9552572994796086,
+ "aupro": 0.8671531357503519,
+ "calibrated": {
+  "threshold": 25.395803451538086,
+  "false_alarm_rate": 1.0,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 37.14088439941406,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.0
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore_fulltrain",
+ "fit_s": 135.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 29.786728497128934,
+  "p95_ms": 31.717143986315932
+ },
+ "params": 24862528,
+ "buffers_mb": 144.9,
+ "ckpt_mb": 244.4
+}

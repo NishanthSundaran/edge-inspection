@@ -1,0 +1,32 @@
+{
+ "category": "wood",
+ "n_test": 79,
+ "n_defect": 60,
+ "n_calib": 25,
+ "image_auroc": 0.9763157894736842,
+ "pixel_auroc": 0.8510875719839879,
+ "aupro": 0.5685154092150356,
+ "calibrated": {
+  "threshold": 0.41935378313064575,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.15
+ },
+ "oracle_f1": {
+  "threshold": 0.3806636929512024,
+  "false_alarm_rate": 0.3157894736842105,
+  "miss_rate": 0.0
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.5,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 669.3905875144992,
+  "p95_ms": 683.5720403396408
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

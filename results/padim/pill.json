@@ -1,0 +1,32 @@
+{
+ "category": "pill",
+ "n_test": 167,
+ "n_defect": 141,
+ "n_calib": 27,
+ "image_auroc": 0.9009819967266776,
+ "pixel_auroc": 0.9483953831216301,
+ "aupro": 0.9241878194868414,
+ "calibrated": {
+  "threshold": 100.88401794433594,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.9929078014184397
+ },
+ "oracle_f1": {
+  "threshold": 24.48442840576172,
+  "false_alarm_rate": 0.4230769230769231,
+  "miss_rate": 0.014184397163120567
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 2.9,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.712534012971446,
+  "p95_ms": 2.7718789016944356
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

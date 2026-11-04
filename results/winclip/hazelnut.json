@@ -1,0 +1,32 @@
+{
+ "category": "hazelnut",
+ "n_test": 110,
+ "n_defect": 70,
+ "n_calib": 39,
+ "image_auroc": 0.9257142857142858,
+ "pixel_auroc": 0.9573021242733846,
+ "aupro": 0.8239360419133355,
+ "calibrated": {
+  "threshold": 0.5092151165008545,
+  "false_alarm_rate": 0.05,
+  "miss_rate": 0.3142857142857143
+ },
+ "oracle_f1": {
+  "threshold": 0.49088600277900696,
+  "false_alarm_rate": 0.25,
+  "miss_rate": 0.08571428571428572
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.7,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 669.8850654938724,
+  "p95_ms": 674.0631349923206
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

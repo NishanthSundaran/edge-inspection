@@ -37,6 +37,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tag", default="patchcore")
     ap.add_argument("--splits", type=int, default=50)
+    ap.add_argument("--roi", action="store_true", help="protocol C on ROI scores (results/<tag>_fulltrain_roi)")
     a = ap.parse_args()
     out = {}
     for c in CATS:
@@ -50,7 +51,11 @@ def main() -> None:
         if ff.exists():
             d = np.load(ff)
             s, y = d["test_scores"], d["labels"]
-            if fb.exists():
+            fr = RES / f"{a.tag}_fulltrain_roi" / f"{c}.npz"
+            roi_scored = a.roi and fr.exists()
+            if roi_scored:  # out-of-fold scores were taken without the ROI, so B does not apply
+                s = np.load(fr)["test_scores"]
+            if fb.exists() and not roi_scored:
                 oof = np.load(fb)["oof_scores"]
                 for k, f in RULES.items():
                     r[f"B_{k}"] = op(s, y, f(oof))
@@ -74,8 +79,12 @@ def main() -> None:
     print(f"| **mean ({len(full)} cat.)** | " + " | ".join(
         f"**{100 * np.mean([out[c][k][0] for c in full]):.1f} / {100 * np.mean([out[c][k][1] for c in full]):.1f}**"
         for k in keys) + " |")
+    print("| mean, each column over every category that has it | " + " | ".join(
+        f"{100 * np.mean([r[k][0] for r in out.values() if k in r]):.1f} / "
+        f"{100 * np.mean([r[k][1] for r in out.values() if k in r]):.1f} ({sum(k in r for r in out.values())})"
+        for k in keys) + " |")
     print("\ncells: false-alarm rate / miss rate, in %")
-    (RES / f"{a.tag}_thresholds.json").write_text(json.dumps(out, indent=1))
+    (RES / f"{a.tag}{'_roi' if a.roi else ''}_thresholds.json").write_text(json.dumps(out, indent=1))
 
 
 if __name__ == "__main__":

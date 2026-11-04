@@ -1,0 +1,32 @@
+{
+ "category": "capsule",
+ "n_test": 132,
+ "n_defect": 109,
+ "n_calib": 22,
+ "image_auroc": 0.864379736737136,
+ "pixel_auroc": 0.9831323417330864,
+ "aupro": 0.910510934689211,
+ "calibrated": {
+  "threshold": 100.54953002929688,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.8990825688073395
+ },
+ "oracle_f1": {
+  "threshold": 23.416311264038086,
+  "false_alarm_rate": 0.5217391304347826,
+  "miss_rate": 0.0
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.3,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.8186304989503697,
+  "p95_ms": 2.9374980891589075
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

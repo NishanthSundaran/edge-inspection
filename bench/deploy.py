@@ -1,7 +1,7 @@
 """Build the service's model folder: deploy/<category>/{model.xml, model.bin, meta.json}.
 
 The model is the OpenVINO INT8 graph with the anomaly head kept in FP32 (see bench/runtimes.py). The
-threshold is the highest score the *deployed path itself* (PIL resize + this INT8 graph) gives a
+threshold (a starting point; POST /calibrate on the line replaces it) is the highest score the *deployed path itself* (PIL resize + this INT8 graph) gives a
 calibration image, since quantisation shifts the score scale; calibration images are good training
 images the model never trained on.
 
@@ -24,9 +24,9 @@ REPO = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 
 from bench.runtimes import RUNS, quantize_int8  # noqa: E402
-from edgeinspect import data  # noqa: E402
+from edgeinspect import data, roi  # noqa: E402
 from edgeinspect.predict import export_onnx  # noqa: E402
-from edgeinspect.serving import InspectionModel  # noqa: E402
+from edgeinspect.serving import InspectionModel, preprocess  # noqa: E402
 
 
 def main() -> None:
@@ -48,12 +48,18 @@ def main() -> None:
         d.mkdir(parents=True, exist_ok=True)
         shutil.copy(src, d / "model.xml")
         shutil.copy(src.with_suffix(".bin"), d / "model.bin")
+        train = sorted((data.DATA / c / "train" / "good").glob("*.png"))
+        tmpl = roi.template([preprocess(Image.open(p), ck["size"])[0] for p in train])
+        (d / "roi_template.png").unlink(missing_ok=True)
+        if roi.uses_roi(c, tmpl):
+            Image.fromarray(tmpl.astype(np.uint8) * 255).save(d / "roi_template.png")
         (d / "meta.json").write_text(json.dumps({"category": c, "size": ck["size"], "threshold": 0.0}))
         m = InspectionModel(d)
         s = np.array([m(Image.open(p)).score for p in data.calib_images(c)])
         meta = {"category": c, "size": ck["size"], "threshold": float(s.max()),
                 "calib_median": float(np.median(s)), "calib_std": float(s.std()), "n_calib": len(s),
-                "runtime": "openvino-cpu-int8 (head fp32)", "model": a.tag}
+                "runtime": "openvino-cpu-int8 (head fp32)", "model": a.tag,
+                "roi": m.roi_template is not None, "threshold_source": "max over held-out good training images"}
         (d / "meta.json").write_text(json.dumps(meta, indent=1))
         print(c, meta, flush=True)
 

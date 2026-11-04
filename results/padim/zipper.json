@@ -1,0 +1,32 @@
+{
+ "category": "zipper",
+ "n_test": 151,
+ "n_defect": 119,
+ "n_calib": 24,
+ "image_auroc": 0.7888655462184875,
+ "pixel_auroc": 0.9718501506332278,
+ "aupro": 0.9110897058032349,
+ "calibrated": {
+  "threshold": 37.034324645996094,
+  "false_alarm_rate": 0.34375,
+  "miss_rate": 0.24369747899159663
+ },
+ "oracle_f1": {
+  "threshold": 23.619321823120117,
+  "false_alarm_rate": 0.71875,
+  "miss_rate": 0.008403361344537815
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 2.8,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.7105800108984113,
+  "p95_ms": 2.751119385357015
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

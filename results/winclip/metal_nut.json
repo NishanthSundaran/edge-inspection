@@ -1,0 +1,32 @@
+{
+ "category": "metal_nut",
+ "n_test": 115,
+ "n_defect": 93,
+ "n_calib": 22,
+ "image_auroc": 0.9540566959921798,
+ "pixel_auroc": 0.507605813171291,
+ "aupro": 0.3675722269620837,
+ "calibrated": {
+  "threshold": 0.49052172899246216,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.3333333333333333
+ },
+ "oracle_f1": {
+  "threshold": 0.47995448112487793,
+  "false_alarm_rate": 0.09090909090909091,
+  "miss_rate": 0.07526881720430108
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 666.5165224985685,
+  "p95_ms": 674.7516717616236
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

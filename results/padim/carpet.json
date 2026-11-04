@@ -1,0 +1,32 @@
+{
+ "category": "carpet",
+ "n_test": 117,
+ "n_defect": 89,
+ "n_calib": 28,
+ "image_auroc": 0.9847512038523274,
+ "pixel_auroc": 0.9893379194181917,
+ "aupro": 0.9596785465925924,
+ "calibrated": {
+  "threshold": 28.54836654663086,
+  "false_alarm_rate": 0.07142857142857142,
+  "miss_rate": 0.06741573033707865
+ },
+ "oracle_f1": {
+  "threshold": 30.686031341552734,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.06741573033707865
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.8289814945310354,
+  "p95_ms": 3.3527845531352787
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

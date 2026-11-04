@@ -1,0 +1,32 @@
+{
+ "category": "capsule",
+ "n_test": 132,
+ "n_defect": 109,
+ "n_calib": 22,
+ "image_auroc": 0.9916234543278819,
+ "pixel_auroc": 0.9900231639946835,
+ "aupro": 0.9238380257991523,
+ "calibrated": {
+  "threshold": 19.465181350708008,
+  "false_alarm_rate": 1.0,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 26.7403564453125,
+  "false_alarm_rate": 0.08695652173913043,
+  "miss_rate": 0.01834862385321101
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore_fulltrain",
+ "fit_s": 122.9,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 28.08911599277053,
+  "p95_ms": 30.31341454916401
+ },
+ "params": 24862528,
+ "buffers_mb": 137.9,
+ "ckpt_mb": 237.5
+}

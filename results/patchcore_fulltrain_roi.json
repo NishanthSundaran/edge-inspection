@@ -1,0 +1,58 @@
+{
+ "capsule": {
+  "roi_area": 0.42266845703125,
+  "defect_px_outside_roi": 0.0,
+  "full": {
+   "image_auroc": 0.9928201037096132,
+   "pixel_auroc": 0.9900155884909811,
+   "aupro": 0.9237570052511501
+  },
+  "roi": {
+   "image_auroc": 0.9912245712006382,
+   "pixel_auroc": 0.9906237475047708,
+   "aupro": 0.935801008506728
+  }
+ },
+ "hazelnut": {
+  "roi_area": 0.4720611572265625,
+  "defect_px_outside_roi": 0.0,
+  "full": {
+   "image_auroc": 1.0,
+   "pixel_auroc": 0.9882546547987361,
+   "aupro": 0.9493513726642624
+  },
+  "roi": {
+   "image_auroc": 1.0,
+   "pixel_auroc": 0.988261629742353,
+   "aupro": 0.949418214826957
+  }
+ },
+ "pill": {
+  "roi_area": 0.4166412353515625,
+  "defect_px_outside_roi": 0.0,
+  "full": {
+   "image_auroc": 0.9528096017457718,
+   "pixel_auroc": 0.9808858350984797,
+   "aupro": 0.9491745799296466
+  },
+  "roi": {
+   "image_auroc": 0.9481723949809056,
+   "pixel_auroc": 0.982608728071191,
+   "aupro": 0.9527744100049209
+  }
+ },
+ "toothbrush": {
+  "roi_area": 0.2964019775390625,
+  "defect_px_outside_roi": 0.004753868460459699,
+  "full": {
+   "image_auroc": 0.9166666666666666,
+   "pixel_auroc": 0.9886643355938807,
+   "aupro": 0.8803823928021537
+  },
+  "roi": {
+   "image_auroc": 1.0,
+   "pixel_auroc": 0.9886802859896958,
+   "aupro": 0.9067051964616779
+  }
+ }
+}

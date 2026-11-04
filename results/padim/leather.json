@@ -1,0 +1,32 @@
+{
+ "category": "leather",
+ "n_test": 124,
+ "n_defect": 92,
+ "n_calib": 24,
+ "image_auroc": 0.9945652173913044,
+ "pixel_auroc": 0.9900657435862044,
+ "aupro": 0.9719482702345769,
+ "calibrated": {
+  "threshold": 21.891937255859375,
+  "false_alarm_rate": 0.125,
+  "miss_rate": 0.021739130434782608
+ },
+ "oracle_f1": {
+  "threshold": 25.837982177734375,
+  "false_alarm_rate": 0.03125,
+  "miss_rate": 0.021739130434782608
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.1,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.712207497097552,
+  "p95_ms": 2.754456305410713
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

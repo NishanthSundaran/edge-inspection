@@ -1,0 +1,32 @@
+{
+ "category": "screw",
+ "n_test": 160,
+ "n_defect": 119,
+ "n_calib": 32,
+ "image_auroc": 0.8356220536995286,
+ "pixel_auroc": 0.9777525448960585,
+ "aupro": 0.9107402516288762,
+ "calibrated": {
+  "threshold": 39.488014221191406,
+  "false_alarm_rate": 0.04878048780487805,
+  "miss_rate": 0.6386554621848739
+ },
+ "oracle_f1": {
+  "threshold": 25.565401077270508,
+  "false_alarm_rate": 0.5853658536585366,
+  "miss_rate": 0.01680672268907563
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.5,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.7227964892517775,
+  "p95_ms": 2.782448456855491
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

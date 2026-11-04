@@ -1,0 +1,32 @@
+{
+ "category": "hazelnut",
+ "n_test": 110,
+ "n_defect": 70,
+ "n_calib": 39,
+ "image_auroc": 0.6546428571428571,
+ "pixel_auroc": 0.9689993859297897,
+ "aupro": 0.914483935913514,
+ "calibrated": {
+  "threshold": 41.02412796020508,
+  "false_alarm_rate": 0.375,
+  "miss_rate": 0.4142857142857143
+ },
+ "oracle_f1": {
+  "threshold": 27.703584671020508,
+  "false_alarm_rate": 0.675,
+  "miss_rate": 0.014285714285714285
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 4.8,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.798864501528442,
+  "p95_ms": 2.9227049264591187
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

@@ -1,0 +1,32 @@
+{
+ "category": "tile",
+ "n_test": 117,
+ "n_defect": 84,
+ "n_calib": 23,
+ "image_auroc": 0.9487734487734488,
+ "pixel_auroc": 0.896940607813733,
+ "aupro": 0.7593453916218461,
+ "calibrated": {
+  "threshold": 49.50564193725586,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.4523809523809524
+ },
+ "oracle_f1": {
+  "threshold": 30.349245071411133,
+  "false_alarm_rate": 0.15151515151515152,
+  "miss_rate": 0.07142857142857142
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 2.8,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.706854007556103,
+  "p95_ms": 2.751733695913572
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

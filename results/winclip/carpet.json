@@ -1,0 +1,32 @@
+{
+ "category": "carpet",
+ "n_test": 117,
+ "n_defect": 89,
+ "n_calib": 28,
+ "image_auroc": 0.9931781701444623,
+ "pixel_auroc": 0.9085658705892159,
+ "aupro": 0.6704259987529827,
+ "calibrated": {
+  "threshold": 0.4120299518108368,
+  "false_alarm_rate": 0.03571428571428571,
+  "miss_rate": 0.0449438202247191
+ },
+ "oracle_f1": {
+  "threshold": 0.4014990031719208,
+  "false_alarm_rate": 0.10714285714285714,
+  "miss_rate": 0.011235955056179775
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 666.390037004021,
+  "p95_ms": 673.543148546014
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

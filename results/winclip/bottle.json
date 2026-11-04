@@ -1,0 +1,32 @@
+{
+ "category": "bottle",
+ "n_test": 83,
+ "n_defect": 63,
+ "n_calib": 21,
+ "image_auroc": 0.9857142857142858,
+ "pixel_auroc": 0.8563662102113863,
+ "aupro": 0.7047718399244625,
+ "calibrated": {
+  "threshold": 0.4282723665237427,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.2222222222222222
+ },
+ "oracle_f1": {
+  "threshold": 0.41268011927604675,
+  "false_alarm_rate": 0.05,
+  "miss_rate": 0.031746031746031744
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 4.9,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 665.168822495616,
+  "p95_ms": 671.4191899460275
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

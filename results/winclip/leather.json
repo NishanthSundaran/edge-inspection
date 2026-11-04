@@ -1,0 +1,32 @@
+{
+ "category": "leather",
+ "n_test": 124,
+ "n_defect": 92,
+ "n_calib": 24,
+ "image_auroc": 1.0,
+ "pixel_auroc": 0.9543306928968527,
+ "aupro": 0.8603866349701125,
+ "calibrated": {
+  "threshold": 0.38502901792526245,
+  "false_alarm_rate": 0.03125,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 0.4142765402793884,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.0
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.3,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 729.5880290039349,
+  "p95_ms": 740.5079462565482
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

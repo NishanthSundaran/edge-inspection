@@ -1,0 +1,32 @@
+{
+ "category": "capsule",
+ "n_test": 132,
+ "n_defect": 109,
+ "n_calib": 22,
+ "image_auroc": 0.6844834463502194,
+ "pixel_auroc": 0.8694242534471119,
+ "aupro": 0.6248939983678263,
+ "calibrated": {
+  "threshold": 0.37114396691322327,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.8348623853211009
+ },
+ "oracle_f1": {
+  "threshold": 0.3143063485622406,
+  "false_alarm_rate": 0.6086956521739131,
+  "miss_rate": 0.009174311926605505
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.3,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 661.0616364923771,
+  "p95_ms": 669.642525089148
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

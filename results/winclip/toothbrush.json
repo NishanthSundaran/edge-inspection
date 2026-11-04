@@ -1,0 +1,32 @@
+{
+ "category": "toothbrush",
+ "n_test": 42,
+ "n_defect": 30,
+ "n_calib": 10,
+ "image_auroc": 0.8527777777777777,
+ "pixel_auroc": 0.8625017368527045,
+ "aupro": 0.686604341347986,
+ "calibrated": {
+  "threshold": 0.48525962233543396,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.6
+ },
+ "oracle_f1": {
+  "threshold": 0.4643966257572174,
+  "false_alarm_rate": 0.4166666666666667,
+  "miss_rate": 0.06666666666666667
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 655.6844329898013,
+  "p95_ms": 661.5958977985429
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

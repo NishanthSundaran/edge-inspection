@@ -1,0 +1,32 @@
+{
+ "category": "grid",
+ "n_test": 78,
+ "n_defect": 57,
+ "n_calib": 26,
+ "image_auroc": 0.7585630743525481,
+ "pixel_auroc": 0.9311895424996818,
+ "aupro": 0.8341618565412542,
+ "calibrated": {
+  "threshold": 27.16358184814453,
+  "false_alarm_rate": 0.047619047619047616,
+  "miss_rate": 0.7719298245614035
+ },
+ "oracle_f1": {
+  "threshold": 16.258119583129883,
+  "false_alarm_rate": 0.5714285714285714,
+  "miss_rate": 0.05263157894736842
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.0,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.705948005313985,
+  "p95_ms": 2.770416359999217
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

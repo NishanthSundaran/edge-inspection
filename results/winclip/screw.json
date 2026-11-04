@@ -1,0 +1,32 @@
+{
+ "category": "screw",
+ "n_test": 160,
+ "n_defect": 119,
+ "n_calib": 32,
+ "image_auroc": 0.7200245952039352,
+ "pixel_auroc": 0.9093793045069304,
+ "aupro": 0.7049329877170336,
+ "calibrated": {
+  "threshold": 0.4951581060886383,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.9663865546218487
+ },
+ "oracle_f1": {
+  "threshold": 0.4325212836265564,
+  "false_alarm_rate": 0.9024390243902439,
+  "miss_rate": 0.008403361344537815
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.2,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 679.6266709861811,
+  "p95_ms": 684.140150345047
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

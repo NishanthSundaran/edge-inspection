@@ -5,10 +5,17 @@
 
 Endpoints
   POST /inspect/{category}   image upload -> score, threshold, verdict, latency (and a heatmap PNG, base64)
+  POST /calibrate/{category} 10+ known-good parts from the line -> new threshold, mean + 2.33 SD of their
+                             scores (a 1% false-alarm target); resets the drift baseline
   GET  /health               models loaded
   GET  /stats                per-category rolling window: flag rate, score drift, latency percentiles
   GET  /metrics              the same in Prometheus text format
   GET  /                     a small live dashboard over /stats
+
+Why field calibration: on MVTec, good test parts score higher than good training parts for some
+categories (leather +2.2 SD), so a threshold from training-session images flagged 47% of good leather.
+Calibrating on half of the good test parts, scored on the other half, cut the mean false-alarm rate from
+11.4% to 4.2% (bench/thresholds.py, protocol C).
 
 Drift: the threshold was set from calibration scores of known-good parts. If the line changes (lighting,
 camera, a new supplier) good parts drift up before anything is flagged. `drift_z` is the rolling median
@@ -18,6 +25,7 @@ score of the last N parts, in calibration standard deviations from the calibrati
 from __future__ import annotations
 
 import base64
+import json
 import collections
 import io
 import os
@@ -64,14 +72,7 @@ def health():
 async def inspect_part(category: str, file: UploadFile = File(...), heatmap: bool = False):
     if category not in models:
         raise HTTPException(404, f"no model for '{category}', have {sorted(models)}")
-    raw = await file.read()
-    if len(raw) > MAX_BYTES:
-        raise HTTPException(413, "image larger than 20 MB")
-    try:
-        img = Image.open(io.BytesIO(raw))
-        img.load()
-    except (UnidentifiedImageError, OSError):
-        raise HTTPException(415, "not a readable image") from None
+    img = _read_image(await file.read())
     m = models[category]
     t0 = time.perf_counter()
     with locks[category]:  # one compiled model per category; serialise calls on it
@@ -88,6 +89,43 @@ async def inspect_part(category: str, file: UploadFile = File(...), heatmap: boo
     if heatmap:
         out["heatmap_png"] = base64.b64encode(heatmap_png(img, v.anomaly_map, v.threshold, m.size)).decode()
     return out
+
+
+def _read_image(raw: bytes) -> Image.Image:
+    if len(raw) > MAX_BYTES:
+        raise HTTPException(413, "image larger than 20 MB")
+    try:
+        img = Image.open(io.BytesIO(raw))
+        img.load()
+    except (UnidentifiedImageError, OSError):
+        raise HTTPException(415, "not a readable image") from None
+    return img
+
+
+@app.post("/calibrate/{category}")
+async def calibrate(category: str, files: list[UploadFile] = File(...)):
+    if category not in models:
+        raise HTTPException(404, f"no model for '{category}', have {sorted(models)}")
+    if len(files) < 10:
+        raise HTTPException(422, f"need at least 10 known-good images, got {len(files)}")
+    imgs = [_read_image(await f.read()) for f in files]
+    m = models[category]
+    with locks[category]:
+        s = np.array([m(img).score for img in imgs])
+    thr = float(s.mean() + 2.326 * s.std(ddof=1))
+    m.threshold = thr
+    m.meta.update(threshold=thr, calib_median=float(np.median(s)), calib_std=float(s.std(ddof=1)),
+                  n_calib=len(s), threshold_source="field calibration (POST /calibrate)")
+    try:  # persist when the models folder is writable (it is read-only in the container by default)
+        (MODELS_DIR / category / "meta.json").write_text(json.dumps(m.meta, indent=1))
+        persisted = True
+    except OSError:
+        persisted = False
+    stats[category]["scores"].clear()
+    stats[category]["flags"].clear()
+    return {"category": category, "n": len(s), "threshold": round(thr, 5),
+            "score_median": round(float(np.median(s)), 5), "score_max": round(float(s.max()), 5),
+            "persisted": persisted}
 
 
 def _summary(category: str) -> dict:

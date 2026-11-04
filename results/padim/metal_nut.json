@@ -1,0 +1,32 @@
+{
+ "category": "metal_nut",
+ "n_test": 115,
+ "n_defect": 93,
+ "n_calib": 22,
+ "image_auroc": 0.9643206256109482,
+ "pixel_auroc": 0.9522501363293074,
+ "aupro": 0.8631710173734425,
+ "calibrated": {
+  "threshold": 41.09186553955078,
+  "false_alarm_rate": 0.045454545454545456,
+  "miss_rate": 0.23655913978494625
+ },
+ "oracle_f1": {
+  "threshold": 25.72577667236328,
+  "false_alarm_rate": 0.36363636363636365,
+  "miss_rate": 0.010752688172043012
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 2.3,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.750693485722877,
+  "p95_ms": 2.789039742492605
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

@@ -1,0 +1,32 @@
+{
+ "category": "tile",
+ "n_test": 117,
+ "n_defect": 84,
+ "n_calib": 23,
+ "image_auroc": 0.9992784992784993,
+ "pixel_auroc": 0.7909650464724383,
+ "aupro": 0.5428281232988065,
+ "calibrated": {
+  "threshold": 0.370927095413208,
+  "false_alarm_rate": 0.030303030303030304,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 0.371422678232193,
+  "false_alarm_rate": 0.030303030303030304,
+  "miss_rate": 0.0
+ },
+ "model": "winclip",
+ "size": 240,
+ "bicubic": true,
+ "tag": "winclip",
+ "fit_s": 5.3,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 662.1427159989253,
+  "p95_ms": 685.618681347114
+ },
+ "params": 208377345,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 833.7
+}

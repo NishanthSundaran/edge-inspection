@@ -1,0 +1,32 @@
+{
+ "category": "transistor",
+ "n_test": 100,
+ "n_defect": 40,
+ "n_calib": 21,
+ "image_auroc": 0.9479166666666667,
+ "pixel_auroc": 0.969704928063082,
+ "aupro": 0.8996316841755688,
+ "calibrated": {
+  "threshold": 54.109256744384766,
+  "false_alarm_rate": 0.016666666666666666,
+  "miss_rate": 0.4
+ },
+ "oracle_f1": {
+  "threshold": 42.43120193481445,
+  "false_alarm_rate": 0.1,
+  "miss_rate": 0.075
+ },
+ "model": "padim",
+ "size": 256,
+ "bicubic": false,
+ "tag": "padim",
+ "fit_s": 3.4,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 2.718092509894632,
+  "p95_ms": 2.7516955553437583
+ },
+ "params": 2782784,
+ "buffers_mb": 165.5,
+ "ckpt_mb": 176.7
+}

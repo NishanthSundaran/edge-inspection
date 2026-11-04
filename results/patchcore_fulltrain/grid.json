@@ -1,0 +1,32 @@
+{
+ "category": "grid",
+ "n_test": 78,
+ "n_defect": 57,
+ "n_calib": 26,
+ "image_auroc": 0.989139515455305,
+ "pixel_auroc": 0.9822694833539859,
+ "aupro": 0.9081717066647932,
+ "calibrated": {
+  "threshold": 19.825740814208984,
+  "false_alarm_rate": 1.0,
+  "miss_rate": 0.0
+ },
+ "oracle_f1": {
+  "threshold": 33.01971435546875,
+  "false_alarm_rate": 0.047619047619047616,
+  "miss_rate": 0.03508771929824561
+ },
+ "model": "patchcore",
+ "size": 256,
+ "bicubic": false,
+ "tag": "patchcore_fulltrain",
+ "fit_s": 177.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 32.96003550349269,
+  "p95_ms": 35.091095756797586
+ },
+ "params": 24862528,
+ "buffers_mb": 166.3,
+ "ckpt_mb": 265.8
+}
