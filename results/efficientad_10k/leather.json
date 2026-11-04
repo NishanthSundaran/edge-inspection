@@ -1,0 +1,32 @@
+{
+ "category": "leather",
+ "n_test": 124,
+ "n_defect": 92,
+ "n_calib": 24,
+ "image_auroc": 0.8525815217391304,
+ "pixel_auroc": 0.9656322423050212,
+ "aupro": 0.9052681773531365,
+ "calibrated": {
+  "threshold": 0.5197455286979675,
+  "false_alarm_rate": 1.0,
+  "miss_rate": 0.021739130434782608
+ },
+ "oracle_f1": {
+  "threshold": 1.2831767797470093,
+  "false_alarm_rate": 0.3125,
+  "miss_rate": 0.15217391304347827
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 810.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.848758513224311,
+  "p95_ms": 12.466097851574887
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}

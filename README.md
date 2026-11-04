@@ -55,12 +55,16 @@ Means over all 15 categories. \* runtime rows use the model trained on 90% of th
 | PatchCore, full train | 98.2 | 98.0 | 92.7 | 30.8 | 161 s |
 | PatchCore, full train + ROI | 98.8 | 98.0 | 93.0 | | |
 | PaDiM, ResNet18 | 89.0 | 96.2 | 89.5 | 2.7 | 3 s |
-| EfficientAD-S, 10k steps | EFFAD_IMG | EFFAD_PIX | EFFAD_PRO | EFFAD_MS | EFFAD_FIT |
+| EfficientAD-S, 10k steps | 94.2 | 94.2 | 86.5 | 11.9 | 815 s |
 | WinCLIP, zero shot (no training images) | 90.3 | 82.4 | 62.1 | 668 | |
 
 Per category tables: `python bench/summarize.py`. WinCLIP lands near its paper (91.8 / 85.1 / 64.6).
 
-EFFAD_NOTE
+**EfficientAD is the fast one, not the accurate one.** On bottle and capsule its OpenVINO INT8 graph runs in
+33 ms on the CPU (PatchCore INT8: 60 and 61 ms) and 3.0 ms in TensorRT fp16 (PatchCore: 5.0 to 5.1). It costs 4.6
+image AUROC points on average, and the loss sits in a few categories: capsule 75.3, leather 85.3,
+transistor 89.2. Naive INT8 hurts it too (capsule 75.3 to 69.5, bottle unchanged). Training longer helps a
+lot: capsule at 70k steps (the paper's count) reaches 91.7 / 98.2 / 89.1, still below PatchCore's 99.1.
 
 **Resolution.** At 320 px, screw AUPRO goes 93.5 to 96.3 and pill 94.8 to 95.9, but image AUROC does not
 move (96.8 to 96.4, 94.7 to 95.0) and GPU latency is 2.4x. 256 stays the default.
@@ -191,4 +195,5 @@ MVTec AD is CC BY-NC-SA 4.0 and not redistributed here.
   rates are noisy; the 50 random splits average that out but do not remove it.
 - The INT8 gate threshold (5%) was picked by me after seeing one failing category; capsule passes at 4.7%.
 - CPU latency is one laptop CPU; numbers on an industrial PC will differ.
-- EfficientAD ran 10k steps, not the paper's 70k (EFFAD_STEPNOTE).
+- EfficientAD ran 10k steps, not the paper's 70k (capsule at 70k: 75.3 to 91.7 image AUROC, but 96 min per category on the laptop GPU, so the
+  full 70k run was not done).

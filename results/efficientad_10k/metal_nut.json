@@ -1,0 +1,32 @@
+{
+ "category": "metal_nut",
+ "n_test": 115,
+ "n_defect": 93,
+ "n_calib": 22,
+ "image_auroc": 0.9716520039100685,
+ "pixel_auroc": 0.9635035700615764,
+ "aupro": 0.8864481023347067,
+ "calibrated": {
+  "threshold": 0.30125999450683594,
+  "false_alarm_rate": 0.09090909090909091,
+  "miss_rate": 0.043010752688172046
+ },
+ "oracle_f1": {
+  "threshold": 0.2616860270500183,
+  "false_alarm_rate": 0.13636363636363635,
+  "miss_rate": 0.03225806451612903
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 812.2,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.883715487783775,
+  "p95_ms": 11.964767436438706
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}

@@ -1,0 +1,32 @@
+{
+ "category": "wood",
+ "n_test": 79,
+ "n_defect": 60,
+ "n_calib": 25,
+ "image_auroc": 0.9517543859649124,
+ "pixel_auroc": 0.8516050622522705,
+ "aupro": 0.7446901073946381,
+ "calibrated": {
+  "threshold": 0.173078715801239,
+  "false_alarm_rate": 0.15789473684210525,
+  "miss_rate": 0.15
+ },
+ "oracle_f1": {
+  "threshold": 0.017986347898840904,
+  "false_alarm_rate": 0.3157894736842105,
+  "miss_rate": 0.016666666666666666
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 814.0,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.864673491800204,
+  "p95_ms": 11.95250206073979
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}

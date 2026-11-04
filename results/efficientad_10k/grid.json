@@ -1,0 +1,32 @@
+{
+ "category": "grid",
+ "n_test": 78,
+ "n_defect": 57,
+ "n_calib": 26,
+ "image_auroc": 0.9966583124477861,
+ "pixel_auroc": 0.9330577906813617,
+ "aupro": 0.8842331597607467,
+ "calibrated": {
+  "threshold": 0.23088587820529938,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.017543859649122806
+ },
+ "oracle_f1": {
+  "threshold": 0.30547618865966797,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.017543859649122806
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 811.8,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.985470002400689,
+  "p95_ms": 12.254781018418726
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}

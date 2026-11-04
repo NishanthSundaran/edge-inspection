@@ -1,0 +1,32 @@
+{
+ "category": "capsule",
+ "n_test": 132,
+ "n_defect": 109,
+ "n_calib": 22,
+ "image_auroc": 0.7530913442361389,
+ "pixel_auroc": 0.8923443918145304,
+ "aupro": 0.692412504444258,
+ "calibrated": {
+  "threshold": 0.877197802066803,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.8899082568807339
+ },
+ "oracle_f1": {
+  "threshold": 0.0749543234705925,
+  "false_alarm_rate": 0.9565217391304348,
+  "miss_rate": 0.0
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 816.8,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.906580490176566,
+  "p95_ms": 12.6319797578617
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}

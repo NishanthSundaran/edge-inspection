@@ -1,0 +1,32 @@
+{
+ "category": "screw",
+ "n_test": 160,
+ "n_defect": 119,
+ "n_calib": 32,
+ "image_auroc": 0.9331830293092848,
+ "pixel_auroc": 0.9786523231853459,
+ "aupro": 0.9388660085048567,
+ "calibrated": {
+  "threshold": 0.16644659638404846,
+  "false_alarm_rate": 0.024390243902439025,
+  "miss_rate": 0.23529411764705882
+ },
+ "oracle_f1": {
+  "threshold": 0.11600714176893234,
+  "false_alarm_rate": 0.3170731707317073,
+  "miss_rate": 0.058823529411764705
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 807.5,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.91009049944114,
+  "p95_ms": 12.488862399186473
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}

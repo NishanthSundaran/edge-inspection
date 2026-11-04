@@ -1,0 +1,32 @@
+{
+ "category": "hazelnut",
+ "n_test": 110,
+ "n_defect": 70,
+ "n_calib": 39,
+ "image_auroc": 0.9057142857142857,
+ "pixel_auroc": 0.9133498816138291,
+ "aupro": 0.8223771216815191,
+ "calibrated": {
+  "threshold": 0.17574121057987213,
+  "false_alarm_rate": 0.075,
+  "miss_rate": 0.34285714285714286
+ },
+ "oracle_f1": {
+  "threshold": 0.09291942417621613,
+  "false_alarm_rate": 0.2,
+  "miss_rate": 0.14285714285714285
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 809.2,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.89383800374344,
+  "p95_ms": 12.61565937747946
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}

@@ -1,0 +1,32 @@
+{
+ "category": "tile",
+ "n_test": 117,
+ "n_defect": 84,
+ "n_calib": 23,
+ "image_auroc": 1.0,
+ "pixel_auroc": 0.8988704899096587,
+ "aupro": 0.8074147877403091,
+ "calibrated": {
+  "threshold": 0.4086483120918274,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.09523809523809523
+ },
+ "oracle_f1": {
+  "threshold": 0.26423078775405884,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.0
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_10k",
+ "fit_s": 814.8,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.81234150135424,
+  "p95_ms": 12.491148608387448
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}
