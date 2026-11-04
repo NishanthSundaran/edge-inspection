@@ -8,7 +8,7 @@ in Docker with CI, drift stats and Prometheus metrics.
 ![service demo](demo/service_demo.gif)
 
 *Real HTTP calls to the service on CPU: part, returned heatmap, verdict against the calibrated threshold.
-The last frame is a miss (see [limitations](#limitations)).*
+The last frame is a miss, shown in amber (see [limitations](#limitations)).*
 
 ## Results at a glance
 
@@ -188,9 +188,11 @@ MVTec AD is CC BY-NC-SA 4.0 and not redistributed here.
 
 ## Limitations
 
-- **Missing parts.** The last demo frame is a transistor that is not there, scored just under the
-  threshold. PatchCore compares local patches, and bare board looks like normal board elsewhere. Logical
-  anomalies like this need a global model (MVTec LOCO is the benchmark for it).
+- **Missing parts.** The service catches 37 of the 40 defective transistors, every bent lead but one,
+  every cut lead, damaged case and shifted or rotated transistor. The two boards with no transistor at all
+  are both missed (37.0 and 37.3 against a threshold of 37.9; the last demo frame is one of them). PatchCore
+  compares local patches, and bare board looks like normal board elsewhere. Logical anomalies like this
+  need a global model (MVTec LOCO is the benchmark for it).
 - Protocol C uses half of the good test parts, 4 to 20 images for some categories, so its false alarm
   rates are noisy; the 50 random splits average that out but do not remove it.
 - The INT8 gate threshold (5%) was picked by me after seeing one failing category; capsule passes at 4.7%.
