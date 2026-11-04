@@ -2,5 +2,6 @@
 !requirements-serve.txt
 !edgeinspect/__init__.py
 !edgeinspect/serving.py
+!edgeinspect/roi.py
 !serve/
 !deploy/

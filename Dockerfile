@@ -4,7 +4,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 MODELS_DIR=/app/deploy
 WORKDIR /app
 COPY requirements-serve.txt .
 RUN pip install --no-cache-dir -r requirements-serve.txt
-COPY edgeinspect/__init__.py edgeinspect/serving.py edgeinspect/
+COPY edgeinspect/__init__.py edgeinspect/serving.py edgeinspect/roi.py edgeinspect/
 COPY serve/ serve/
 COPY deploy/ deploy/
 RUN useradd -m app && chown -R app /app

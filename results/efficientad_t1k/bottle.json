@@ -1,0 +1,32 @@
+{
+ "category": "bottle",
+ "n_test": 83,
+ "n_defect": 63,
+ "n_calib": 21,
+ "image_auroc": 0.9801587301587301,
+ "pixel_auroc": 0.9533877858219506,
+ "aupro": 0.8475494005172212,
+ "calibrated": {
+  "threshold": 0.38047805428504944,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.06349206349206349
+ },
+ "oracle_f1": {
+  "threshold": 0.2724197804927826,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.031746031746031744
+ },
+ "model": "efficientad",
+ "size": 256,
+ "bicubic": false,
+ "tag": "efficientad_t1k",
+ "fit_s": 87.6,
+ "runtime": "pytorch-cuda-fp32",
+ "latency": {
+  "median_ms": 11.768702999688685,
+  "p95_ms": 13.71533460333012
+ },
+ "params": 8058628,
+ "buffers_mb": 0.0,
+ "ckpt_mb": 32.3
+}
