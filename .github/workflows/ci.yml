@@ -4,8 +4,8 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with: {python-version: "3.10"}
       - run: pip install -r requirements-serve.txt scikit-learn==1.7.2 httpx pytest
       - run: python -m pytest -q
@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: test
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with: {python-version: "3.10"}
       - run: pip install numpy==2.2.6 openvino==2026.4.1 pillow==12.3.0 && python -m tests.tiny_model deploy/tiny
       - run: docker build -t edge-inspection .
