@@ -3,5 +3,4 @@ __pycache__/
 logs/
 deploy/
 pre_trained/
-results/*/*.npz
 .pytest_cache/
